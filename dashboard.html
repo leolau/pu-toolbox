@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Parallel Universe - Cost Dashboard</title>
+<title>Cost Dashboard</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -35,17 +35,8 @@
     padding: 24px;
     text-align: center;
   }
-  .card .value {
-    font-size: 32px;
-    font-weight: 700;
-    margin-top: 4px;
-  }
-  .card .label {
-    font-size: 12px;
-    color: #706080;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
+  .card .value { font-size: 32px; font-weight: 700; margin-top: 4px; }
+  .card .label { font-size: 12px; color: #706080; text-transform: uppercase; letter-spacing: 2px; }
   .green { color: #50d890; }
   .gold { color: #c8b080; }
   .cyan { color: #50dcff; }
@@ -64,11 +55,8 @@
   }
   .chart-box.full { grid-column: 1 / -1; }
   .chart-box h3 {
-    font-size: 14px;
-    color: #9080a0;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
+    font-size: 14px; color: #9080a0; text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 16px;
   }
   .chart-box canvas { width: 100% !important; height: auto !important; max-height: 350px; }
   .table-wrap { overflow-x: auto; }
@@ -79,78 +67,59 @@
     border-bottom: 1px solid rgba(160,100,255,0.08);
   }
   td {
-    padding: 8px 12px; border-bottom: 1px solid rgba(160,100,255,0.04);
-    color: #a098b0;
+    padding: 8px 12px; border-bottom: 1px solid rgba(160,100,255,0.04); color: #a098b0;
   }
   td.cost { color: #c8b080; font-weight: 600; text-align: right; }
   .tag {
     display: inline-block; padding: 2px 10px; border-radius: 100px;
     font-size: 11px; background: rgba(160,100,255,0.1); color: #a064ff;
   }
-  .updated {
-    color: #504060; font-size: 12px; text-align: center; margin-top: 20px;
-  }
-  @media (max-width: 700px) {
-    .chart-row { grid-template-columns: 1fr; }
-  }
+  .loading { text-align: center; padding: 80px 20px; color: #504060; }
+  .loading .spinner { font-size: 40px; margin-bottom: 16px; animation: spin 2s linear infinite; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .error { text-align: center; padding: 60px; color: #805050; }
+  .updated { color: #504060; font-size: 12px; text-align: center; margin-top: 20px; }
+  @media (max-width: 700px) { .chart-row { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
 <div class="container">
+  <h1>Cost Dashboard</h1>
+  <p class="subtitle">LLM spending tracker · Data fetched live</p>
 
-  <h1>Parallel Universe - Cost Dashboard</h1>
-  <p class="subtitle">LLM spending tracker - Updated on demand</p>
-
-  <div class="cards">
-    <div class="card">
-      <div class="label">Current Balance</div>
-      <div class="value green">$10.85</div>
-    </div>
-    <div class="card">
-      <div class="label">Total Spent</div>
-      <div class="value gold">$0.0182</div>
-    </div>
-    <div class="card">
-      <div class="label">Total Tasks</div>
-      <div class="value cyan">3</div>
-    </div>
-    <div class="card">
-      <div class="label">Tokens Used</div>
-      <div class="value magenta">315,983</div>
-    </div>
+  <div id="loading" class="loading">
+    <div class="spinner">⌛</div>
+    Loading latest cost data...
   </div>
 
-  <div class="chart-row">
-    <div class="chart-box">
-      <h3>Daily Spending & Cumulative</h3>
-      <canvas id="dailyChart"></canvas>
+  <div id="content" style="display:none">
+    <div class="cards" id="summaryCards"></div>
+    <div class="chart-row">
+      <div class="chart-box">
+        <h3>Daily Spending & Cumulative</h3>
+        <canvas id="dailyChart"></canvas>
+      </div>
+      <div class="chart-box">
+        <h3>By Task Type</h3>
+        <canvas id="typeChart"></canvas>
+      </div>
     </div>
-    <div class="chart-box">
-      <h3>By Task Type</h3>
-      <canvas id="typeChart"></canvas>
-    </div>
-  </div>
-
-  <div class="chart-box full">
-    <h3>Task History</h3>
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr>
+    <div class="chart-box full">
+      <h3>Task History</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
             <th>Date</th><th>Task ID</th><th>Type</th>
             <th>Description</th><th>Tokens</th><th>Cost</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>2026-06-30</td><td>HIS-20260630</td><td><span class="tag other">Other</span></td><td>Top 5 Edtech Companies Hong Kong</td><td>65,575</td><td class="cost">$0.009061</td></tr>
-          <tr><td>2026-06-30</td><td>RES-20260630-001</td><td><span class="tag research">Research</span></td><td>Setting up cost tracking system for JA & CAR operations</td><td>82,132</td><td class="cost">$0.009181</td></tr>
-          <tr><td>2026-06-30</td><td>RES-20260630-002</td><td><span class="tag research">Research</span></td><td>Parallel Universe logo design iterations v1-v5</td><td>168,276</td><td class="cost">$0.000000</td></tr>
-        </tbody>
-      </table>
+          </tr></thead>
+          <tbody id="taskTable"></tbody>
+        </table>
+      </div>
     </div>
+    <p class="updated" id="updatedAt"></p>
   </div>
 
-  <p class="updated">Last updated: 2026-07-01 13:02 UTC - Ask me to refresh anytime!</p>
+  <div id="error" class="error" style="display:none"></div>
 </div>
 
 <script>
@@ -160,85 +129,117 @@ const COLORS = {
   grid: 'rgba(160,100,255,0.06)', text: '#706080'
 };
 
-const dailyData = [["2026-06-30", 0.018242, 0.018242]];
-new Chart(document.getElementById('dailyChart'), {
-  type: 'bar',
-  data: {
-    labels: dailyData.map(function(d) { return d[0]; }),
-    datasets: [{
-      label: 'Daily ($)',
-      data: dailyData.map(function(d) { return d[1]; }),
-      backgroundColor: 'rgba(200,176,128,0.3)',
-      borderColor: '#c8b080',
-      borderWidth: 1,
-      borderRadius: 4,
-      order: 2
-    }, {
-      label: 'Cumulative ($)',
-      data: dailyData.map(function(d) { return d[2]; }),
-      borderColor: '#50dcff',
-      backgroundColor: 'rgba(80,220,255,0.05)',
-      fill: true,
-      tension: 0.3,
-      pointRadius: 4,
-      pointBackgroundColor: '#50dcff',
-      order: 1
-    }]
-  },
-  options: {
-    responsive: true,
-    interaction: { mode: 'index', intersect: false },
-    plugins: {
-      legend: {
-        labels: { color: COLORS.text, font: { size: 11 } }
-      }
+async function loadData() {
+  try {
+    const resp = await fetch("https://leolau.github.io/pu-toolbox/data.json");
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    const data = await resp.json();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    render(data);
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('error').innerHTML =
+      '<div style="font-size:40px;margin-bottom:12px">⚠️</div>' +
+      '<p>Could not load cost data.</p><p style="font-size:12px;margin-top:8px">' + e.message + '</p>' +
+      '<p style="margin-top:20px"><a href="javascript:location.reload()" style="color:#a064ff">Retry</a></p>';
+  }
+}
+
+function render(data) {
+  const s = data.summary;
+
+  // Summary cards
+  document.getElementById('summaryCards').innerHTML =
+    '<div class="card"><div class="label">Current Balance</div><div class="value green">$' +
+    (s.balance != null ? s.balance.toFixed(2) : '--') +
+    '</div></div>' +
+    '<div class="card"><div class="label">Total Spent</div><div class="value gold">$' +
+    s.total_cost.toFixed(4) + '</div></div>' +
+    '<div class="card"><div class="label">Total Tasks</div><div class="value cyan">' +
+    s.total_tasks + '</div></div>' +
+    '<div class="card"><div class="label">Tokens Used</div><div class="value magenta">' +
+    s.total_tokens.toLocaleString() + '</div></div>';
+
+  // Daily chart
+  const dailyData = data.daily;
+  new Chart(document.getElementById('dailyChart'), {
+    type: 'bar',
+    data: {
+      labels: dailyData.map(function(d) { return d[0]; }),
+      datasets: [{
+        label: 'Daily ($)',
+        data: dailyData.map(function(d) { return d[1]; }),
+        backgroundColor: 'rgba(200,176,128,0.3)',
+        borderColor: '#c8b080', borderWidth: 1, borderRadius: 4, order: 2
+      }, {
+        label: 'Cumulative ($)',
+        data: dailyData.map(function(d) { return d[2]; }),
+        borderColor: '#50dcff', backgroundColor: 'rgba(80,220,255,0.05)',
+        fill: true, tension: 0.3, pointRadius: 4, pointBackgroundColor: '#50dcff', order: 1
+      }]
     },
-    scales: {
-      x: {
-        grid: { color: COLORS.grid },
-        ticks: { color: COLORS.text, font: { size: 11 } }
-      },
-      y: {
-        beginAtZero: true,
-        grid: { color: COLORS.grid },
-        ticks: { color: COLORS.text, font: { size: 11 }, callback: function(v) { return '$' + v.toFixed(4); } }
+    options: {
+      responsive: true, interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { labels: { color: COLORS.text, font: { size: 11 } } } },
+      scales: {
+        x: { grid: { color: COLORS.grid }, ticks: { color: COLORS.text, font: { size: 11 } } },
+        y: { beginAtZero: true, grid: { color: COLORS.grid },
+          ticks: { color: COLORS.text, font: { size: 11 },
+            callback: function(v) { return '$' + v.toFixed(4); } } }
       }
     }
-  }
-});
+  });
 
-const typeData = [["Research", 2, 0.009181], ["Other", 1, 0.009061]];
-const typeColors = ['#a064ff', '#50dcff', '#c8b080', '#50d890', '#ff70b4', '#ffc850'];
-new Chart(document.getElementById('typeChart'), {
-  type: 'doughnut',
-  data: {
-    labels: typeData.map(function(d) { return d[0]; }),
-    datasets: [{
-      data: typeData.map(function(d) { return d[2]; }),
-      backgroundColor: typeColors.slice(0, typeData.length),
-      borderColor: '#0a0820',
-      borderWidth: 2
-    }]
-  },
-  options: {
-    responsive: true,
-    maintainAspectRatio: true,
-    plugins: {
-      legend: {
-        position: 'bottom',
-        labels: { color: COLORS.text, font: { size: 11 }, padding: 12 }
-      },
-      tooltip: {
-        callbacks: {
-          label: function(ctx) {
-            var d = typeData[ctx.dataIndex];
-            return d[0] + ': ' + d[1] + ' tasks, $' + d[2].toFixed(4);
+  // Type pie chart
+  const typeData = data.by_type;
+  const typeColors = ['#a064ff', '#50dcff', '#c8b080', '#50d890', '#ff70b4', '#ffc850'];
+  new Chart(document.getElementById('typeChart'), {
+    type: 'doughnut',
+    data: {
+      labels: typeData.map(function(d) { return d.type; }),
+      datasets: [{
+        data: typeData.map(function(d) { return d.cost; }),
+        backgroundColor: typeColors.slice(0, typeData.length),
+        borderColor: '#0a0820', borderWidth: 2
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true,
+      plugins: {
+        legend: { position: 'bottom', labels: { color: COLORS.text, font: { size: 11 }, padding: 12 } },
+        tooltip: {
+          callbacks: {
+            label: function(ctx) {
+              var d = typeData[ctx.dataIndex];
+              return d.type + ': ' + d.count + ' tasks, $' + d.cost.toFixed(4);
+            }
           }
         }
       }
     }
-  }
-});
+  });
+
+  // Task table
+  var tableHtml = '';
+  data.tasks.forEach(function(t) {
+    tableHtml += '<tr>' +
+      '<td>' + t.date + '</td>' +
+      '<td>' + t.id + '</td>' +
+      '<td><span class="tag">' + t.type.charAt(0).toUpperCase() + t.type.slice(1) + '</span></td>' +
+      '<td>' + t.desc + '</td>' +
+      '<td>' + t.tokens.toLocaleString() + '</td>' +
+      '<td class="cost">$' + t.cost.toFixed(6) + '</td>' +
+      '</tr>';
+  });
+  document.getElementById('taskTable').innerHTML = tableHtml;
+
+  // Timestamp
+  document.getElementById('updatedAt').textContent = 'Last updated: ' + (data.updated_at || 'unknown');
+}
+
+loadData();
 </script>
 </body>
 </html>
