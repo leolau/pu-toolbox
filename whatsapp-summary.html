@@ -82,6 +82,7 @@
     font-size: 11px;
     font-weight: 600;
   }
+  .sender-list li { padding: 8px 0; }
 
   /* Messages table */
   .section-title {
@@ -166,20 +167,31 @@ function escapeHtml(text) {
 }
 
 function topSenders(messages) {
-  const counts = {};
+  const map = {};
   for (const m of messages) {
     const name = m.sender?.name || m.raw?.senderName || 'Unknown';
     const senderId = m.raw?.senderId || m.sender?.id || '';
+    const chatName = m.raw?.chatName || m.chat?.id || '';
+    const isGroup = m.raw?.isGroup || m.chat?.is_group || false;
+    const body = m.raw?.body || m.message?.text || '';
+    const ts = m.timestamp || 0;
     const key = name + '::' + senderId;
-    counts[key] = (counts[key] || 0) + 1;
+    if (!map[key]) {
+      map[key] = { count: 0, chatName, isGroup, lastMsg: body, lastTs: ts };
+    }
+    map[key].count += 1;
+    if (ts > map[key].lastTs) {
+      map[key].lastMsg = body;
+      map[key].lastTs = ts;
+    }
   }
-  return Object.entries(counts)
-    .sort((a, b) => b[1] - a[1])
+  return Object.entries(map)
+    .sort((a, b) => b[1].count - a[1].count)
     .slice(0, 5)
-    .map(([key, count]) => {
+    .map(([key, info]) => {
       const [name, id] = key.split('::');
       const number = id.replace(/@.*/, '');
-      return { name, number, count };
+      return { name, number, ...info };
     });
 }
 
@@ -214,7 +226,14 @@ function render() {
       listHtml = '<li class="no-data">No messages</li>';
     } else {
       for (const s of senders) {
-        listHtml += '<li><span class="name">' + escapeHtml(s.name) + '</span><span class="count-badge">' + s.count + '</span></li>';
+        listHtml += '<li><div style="display:flex;flex-direction:column;gap:2px;width:100%">' +
+        '<div style="display:flex;justify-content:space-between;align-items:center">' +
+        '<span class="name">' + escapeHtml(s.name) + '</span>' +
+        '<span class="count-badge">' + s.count + '</span></div>' +
+        '<div style="display:flex;justify-content:space-between;font-size:11px;color:#605070">' +
+        '<span>' + (s.isGroup ? '👥 Group' : '💬 DM') + '</span>' +
+        '<span style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' +
+        escapeHtml((s.lastMsg || '').substring(0, 40)) + '</span></div></div></li>';
       }
     }
     periodsHtml += '<div class="period-box">' +
