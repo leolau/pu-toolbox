@@ -1,0 +1,322 @@
+{
+  "updated_at": "2026-07-01 14:59 UTC",
+  "phones": [
+    {
+      "id": "phone1",
+      "number": "+85251922892",
+      "label": "Phone 1",
+      "paired_at": "2026-07-01T14:32:13.465238+00:00",
+      "status": "active"
+    },
+    {
+      "id": "phone2",
+      "number": "+85296660978",
+      "label": "Phone 2",
+      "paired_at": "2026-07-01T14:32:13.465238+00:00",
+      "status": "active"
+    }
+  ],
+  "messages": [
+    {
+      "id": "40019d1f-32eb-44b2-ba35-1f7af6a3a854",
+      "timestamp": 1782916021,
+      "received_at": "2026-07-01T14:35:55.188795+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Faridah Rohani Rais",
+        "id": "60516189905099@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy birthday @140256603025553 .\nMay you be blessed with good health always .",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A88CA0350E883BA97A7",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "60516189905099@lid",
+        "senderName": "Faridah Rohani Rais",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy birthday @140256603025553 .\nMay you be blessed with good health always .",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782916021
+      }
+    },
+    {
+      "id": "d830ca5e-e9f6-4278-a3d3-6f29adc4d201",
+      "timestamp": 1782916892,
+      "received_at": "2026-07-01T14:41:33.406103+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Chris",
+        "id": "90215804850303@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy Birthday @140256603025553 \ud83c\udf89\ud83c\udf82",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "ACBF3753ECCE882139543F933EA7F759",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "90215804850303@lid",
+        "senderName": "Chris",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy Birthday @140256603025553 \ud83c\udf89\ud83c\udf82",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782916892
+      }
+    },
+    {
+      "id": "29c0bd1e-3e55-4a69-aa4c-928931d2b834",
+      "timestamp": 1782917102,
+      "received_at": "2026-07-01T14:45:03.796927+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Hans",
+        "id": "241506078171223@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy Birthday @140256603025553 \ud83c\udf82",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "A5DC71ECEDCD09C0F01CC0CCA6EB82EC",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "241506078171223@lid",
+        "senderName": "Hans",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy Birthday @140256603025553 \ud83c\udf82",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782917102
+      }
+    },
+    {
+      "id": "451999af-fada-48c6-a448-1f5734fda67e",
+      "timestamp": 1782917131,
+      "received_at": "2026-07-01T14:45:32.508458+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Joseph Siew",
+        "id": "147923035799748@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy birthday @140256603025553 \ud83c\udf82\ud83c\udf7e\ud83c\udf77\ud83c\udf79\ud83c\udf7a\ud83c\udf70",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "A57DC312D88F418FD8A1E5A9DC19A704",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "147923035799748@lid",
+        "senderName": "Joseph Siew",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy birthday @140256603025553 \ud83c\udf82\ud83c\udf7e\ud83c\udf77\ud83c\udf79\ud83c\udf7a\ud83c\udf70",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782917131
+      }
+    }
+  ],
+  "contacts": [
+    {
+      "phone": "",
+      "name": null,
+      "is_family": 0,
+      "relation": null,
+      "first_seen": "2026-07-01T14:35:55.188795+00:00",
+      "last_seen": "2026-07-01T14:45:32.508458+00:00",
+      "message_count": 4
+    },
+    {
+      "phone": "+85294066060",
+      "name": "Heidi Lui",
+      "is_family": 1,
+      "relation": "Wife",
+      "first_seen": "2026-07-01T14:16:29.321165",
+      "last_seen": null,
+      "message_count": 0
+    },
+    {
+      "phone": "+85252395796",
+      "name": "Mokan Lau",
+      "is_family": 1,
+      "relation": "Elder Son",
+      "first_seen": "2026-07-01T14:16:29.321165",
+      "last_seen": null,
+      "message_count": 0
+    },
+    {
+      "phone": "+85291318528",
+      "name": "Mowan Lau",
+      "is_family": 1,
+      "relation": "Younger Son",
+      "first_seen": "2026-07-01T14:16:29.321165",
+      "last_seen": null,
+      "message_count": 0
+    },
+    {
+      "phone": "+14167239963",
+      "name": "Anna Hau",
+      "is_family": 1,
+      "relation": "Mother",
+      "first_seen": "2026-07-01T14:16:29.321165",
+      "last_seen": null,
+      "message_count": 0
+    },
+    {
+      "phone": "+85262776600",
+      "name": "Andrew Lau",
+      "is_family": 1,
+      "relation": "Brother",
+      "first_seen": "2026-07-01T14:16:29.321165",
+      "last_seen": null,
+      "message_count": 0
+    },
+    {
+      "phone": "+85262288510",
+      "name": "Jay Lau",
+      "is_family": 1,
+      "relation": "Sister-in-law",
+      "first_seen": "2026-07-01T14:16:29.321165",
+      "last_seen": null,
+      "message_count": 0
+    }
+  ],
+  "tasks": [
+    {
+      "id": "f82ce79c-6fc9-41b5-8a4a-1301b9bf7067",
+      "source_phone": "phone1",
+      "source_msg_id": "79d07a2a-6019-41c8-8b8a-b03058048b3e",
+      "description": "Pick up kids from school at 3pm",
+      "due_date": "2026-07-01",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-07-01T14:42:40.261558+00:00"
+    },
+    {
+      "id": "18810679-5975-4ca9-9ca2-a2a8f7da5e52",
+      "source_phone": "phone1",
+      "source_msg_id": "79d07a2a-6019-41c8-8b8a-b03058048b3e",
+      "description": "Dinner with mom tonight",
+      "due_date": "2026-07-01",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-07-01T14:42:40.261558+00:00"
+    },
+    {
+      "id": "3810f691-a59c-461f-8199-a975d554dbca",
+      "source_phone": "phone2",
+      "source_msg_id": "2eac37c7-b929-4ba1-89c6-45e0d1521b12",
+      "description": "Approve final terms for client contract renewal",
+      "due_date": "2026-07-01",
+      "status": "pending",
+      "priority": "high",
+      "created_at": "2026-07-01T14:42:37.302100+00:00"
+    }
+  ]
+}
