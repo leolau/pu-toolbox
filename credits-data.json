@@ -1,397 +1,212 @@
 {
-  "updated_at": "2026-07-01 16:52 UTC",
+  "updated_at": "2026-07-01 17:03 UTC",
   "total_cost": 0.903242,
-  "total_calls": 23,
+  "total_calls": 22,
   "total_tokens": 1630483,
   "tasks": [
     {
-      "name": "Causal Chat (2026-07-01 session)",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.45,
-      "tokens": 160000,
-      "first": "2026-07-01T10:08:29.712726+00:00"
-    },
-    {
-      "name": "Parallel Universe logo design (v1-v5 iterations)",
-      "type": "research",
-      "calls": 1,
-      "cost": 0.08,
-      "tokens": 300000,
-      "first": "2026-07-01T04:00:00+00:00"
-    },
-    {
-      "name": "WhatsApp Summary: add group name, media links, sender filter clicks",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.05,
-      "tokens": 20000,
-      "first": "2026-07-01T13:00:00+00:00"
-    },
-    {
-      "name": "Refactor WhatsApp Summary to use SQLite DB instead of embedded JSON",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.05,
-      "tokens": 20000,
-      "first": "2026-07-01T14:30:00+00:00"
-    },
-    {
-      "name": "Setting up GitHub Pages, toolbox, and dynamic dashboard",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.04,
-      "tokens": 270000,
-      "first": "2026-07-01T05:21:49.855284+00:00"
-    },
-    {
-      "name": "Build WhatsApp Summary page with embedded data + toolbox card",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.04,
-      "tokens": 16000,
-      "first": "2026-07-01T12:45:00+00:00"
-    },
-    {
-      "name": "Sync to GitHub script and dynamic data.json setup",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.03,
-      "tokens": 105000,
-      "first": "2026-07-01T05:45:00+00:00"
-    },
-    {
-      "name": "Swap Task ID and Cost columns in dashboard tables",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.03,
-      "tokens": 75000,
-      "first": "2026-07-01T07:26:45.550473+00:00"
-    },
-    {
-      "name": "Cost ledger skill creation and updates (v1-v2)",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.03,
-      "tokens": 120000,
-      "first": "2026-07-01T02:00:00+00:00"
-    },
-    {
-      "name": "Dashboard timezone & currency selectors feature",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.02,
-      "tokens": 75000,
-      "first": "2026-07-01T06:00:00+00:00"
-    },
-    {
-      "name": "Add Top 10 expensive tasks section + fix cache issues",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.02,
-      "tokens": 50000,
-      "first": "2026-07-01T06:50:38.981856+00:00"
-    },
-    {
-      "name": "Toolbox page creation and cleanup (remove PU refs)",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.01,
-      "tokens": 37500,
-      "first": "2026-07-01T05:30:00+00:00"
-    },
-    {
-      "name": "MCP server end-to-end test",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.01,
-      "tokens": 25000,
-      "first": "2026-07-01T07:13:05.895453+00:00"
-    },
-    {
-      "name": "Investigate MCP tools not loading in new session",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.01,
-      "tokens": 4000,
-      "first": "2026-07-01T07:27:07.088019+00:00"
-    },
-    {
-      "name": "DeepSeek balance alert cron job setup",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.01,
-      "tokens": 30000,
-      "first": "2026-07-01T06:36:30.993473+00:00"
-    },
-    {
-      "name": "Setting up cost tracking system for JA & CAR operations",
-      "type": "research",
-      "calls": 1,
-      "cost": 0.009181,
-      "tokens": 82132,
-      "first": "2026-06-30T11:52:36.537850+00:00"
-    },
-    {
-      "name": "Top 5 Edtech Companies Hong Kong",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.009061,
-      "tokens": 65575,
+      "name": "Before-migration",
+      "type": "legacy",
+      "calls": 22,
+      "cost": 0.903242,
+      "tokens": 1630483,
       "first": "2026-06-30T08:30:32.522375+00:00"
-    },
-    {
-      "name": "Auto-sync verification test",
-      "type": "other",
-      "calls": 1,
-      "cost": 0.005,
-      "tokens": 7000,
-      "first": "2026-07-01T06:55:00+00:00"
-    },
-    {
-      "name": "Parallel Universe logo design iterations v1-v5",
-      "type": "research",
-      "calls": 1,
-      "cost": 0,
-      "tokens": 168276,
-      "first": "2026-06-30T12:50:10.240417+00:00"
-    },
-    {
-      "name": "MCP server verification test",
-      "type": "other",
-      "calls": 1,
-      "cost": 0,
-      "tokens": 0,
-      "first": "2026-07-01T07:31:40.702317+00:00"
-    },
-    {
-      "name": "Causal Chat: testing new system",
-      "type": "casual",
-      "calls": 1,
-      "cost": 0,
-      "tokens": 0,
-      "first": "2026-07-01T16:51:57.183853+00:00"
-    },
-    {
-      "name": "Build WhatsApp Escalation Config page + save/restart API server + toolbox card",
-      "type": "other",
-      "calls": 1,
-      "cost": 0,
-      "tokens": 0,
-      "first": "2026-07-01T15:21:53.138866+00:00"
-    },
-    {
-      "name": "Build & fix WhatsApp Escalation Config page with phone toggles, CRUD, embedded data",
-      "type": "other",
-      "calls": 1,
-      "cost": 0,
-      "tokens": 0,
-      "first": "2026-07-01T16:08:37.717895+00:00"
     }
   ],
   "calls": [
     {
-      "id": 1,
-      "task": "Causal Chat: testing new system",
-      "type": "casual",
-      "cost": 0,
-      "tokens": 0,
-      "prompt": "test prompt",
-      "time": "2026-07-01T16:51:57.183853+00:00"
-    },
-    {
-      "id": 23,
-      "task": "Build & fix WhatsApp Escalation Config page with phone toggles, CRUD, embedded data",
-      "type": "other",
+      "id": 45,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0,
       "tokens": 0,
       "prompt": "",
       "time": "2026-07-01T16:08:37.717895+00:00"
     },
     {
-      "id": 22,
-      "task": "Build WhatsApp Escalation Config page + save/restart API server + toolbox card",
-      "type": "other",
+      "id": 44,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0,
       "tokens": 0,
       "prompt": "",
       "time": "2026-07-01T15:21:53.138866+00:00"
     },
     {
-      "id": 21,
-      "task": "Refactor WhatsApp Summary to use SQLite DB instead of embedded JSON",
-      "type": "other",
+      "id": 43,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.05,
       "tokens": 20000,
       "prompt": "",
       "time": "2026-07-01T14:30:00+00:00"
     },
     {
-      "id": 20,
-      "task": "WhatsApp Summary: add group name, media links, sender filter clicks",
-      "type": "other",
+      "id": 42,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.05,
       "tokens": 20000,
       "prompt": "",
       "time": "2026-07-01T13:00:00+00:00"
     },
     {
-      "id": 19,
-      "task": "Build WhatsApp Summary page with embedded data + toolbox card",
-      "type": "other",
+      "id": 41,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.04,
       "tokens": 16000,
       "prompt": "",
       "time": "2026-07-01T12:45:00+00:00"
     },
     {
-      "id": 18,
-      "task": "Causal Chat (2026-07-01 session)",
-      "type": "other",
+      "id": 40,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.45,
       "tokens": 160000,
       "prompt": "",
       "time": "2026-07-01T10:08:29.712726+00:00"
     },
     {
-      "id": 17,
-      "task": "MCP server verification test",
-      "type": "other",
+      "id": 39,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0,
       "tokens": 0,
       "prompt": "",
       "time": "2026-07-01T07:31:40.702317+00:00"
     },
     {
-      "id": 16,
-      "task": "Investigate MCP tools not loading in new session",
-      "type": "other",
+      "id": 38,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.01,
       "tokens": 4000,
       "prompt": "",
       "time": "2026-07-01T07:27:07.088019+00:00"
     },
     {
-      "id": 15,
-      "task": "Swap Task ID and Cost columns in dashboard tables",
-      "type": "other",
+      "id": 37,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.03,
       "tokens": 75000,
       "prompt": "",
       "time": "2026-07-01T07:26:45.550473+00:00"
     },
     {
-      "id": 14,
-      "task": "MCP server end-to-end test",
-      "type": "other",
+      "id": 36,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.01,
       "tokens": 25000,
       "prompt": "",
       "time": "2026-07-01T07:13:05.895453+00:00"
     },
     {
-      "id": 13,
-      "task": "Auto-sync verification test",
-      "type": "other",
+      "id": 35,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.005,
       "tokens": 7000,
       "prompt": "",
       "time": "2026-07-01T06:55:00+00:00"
     },
     {
-      "id": 12,
-      "task": "Add Top 10 expensive tasks section + fix cache issues",
-      "type": "other",
+      "id": 34,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.02,
       "tokens": 50000,
       "prompt": "",
       "time": "2026-07-01T06:50:38.981856+00:00"
     },
     {
-      "id": 11,
-      "task": "DeepSeek balance alert cron job setup",
-      "type": "other",
+      "id": 33,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.01,
       "tokens": 30000,
       "prompt": "",
       "time": "2026-07-01T06:36:30.993473+00:00"
     },
     {
-      "id": 10,
-      "task": "Dashboard timezone & currency selectors feature",
-      "type": "other",
+      "id": 32,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.02,
       "tokens": 75000,
       "prompt": "",
       "time": "2026-07-01T06:00:00+00:00"
     },
     {
-      "id": 9,
-      "task": "Sync to GitHub script and dynamic data.json setup",
-      "type": "other",
+      "id": 31,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.03,
       "tokens": 105000,
       "prompt": "",
       "time": "2026-07-01T05:45:00+00:00"
     },
     {
-      "id": 8,
-      "task": "Toolbox page creation and cleanup (remove PU refs)",
-      "type": "other",
+      "id": 30,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.01,
       "tokens": 37500,
       "prompt": "",
       "time": "2026-07-01T05:30:00+00:00"
     },
     {
-      "id": 7,
-      "task": "Setting up GitHub Pages, toolbox, and dynamic dashboard",
-      "type": "other",
+      "id": 29,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.04,
       "tokens": 270000,
       "prompt": "",
       "time": "2026-07-01T05:21:49.855284+00:00"
     },
     {
-      "id": 6,
-      "task": "Parallel Universe logo design (v1-v5 iterations)",
-      "type": "research",
+      "id": 28,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.08,
       "tokens": 300000,
       "prompt": "",
       "time": "2026-07-01T04:00:00+00:00"
     },
     {
-      "id": 5,
-      "task": "Cost ledger skill creation and updates (v1-v2)",
-      "type": "other",
+      "id": 27,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.03,
       "tokens": 120000,
       "prompt": "",
       "time": "2026-07-01T02:00:00+00:00"
     },
     {
-      "id": 4,
-      "task": "Parallel Universe logo design iterations v1-v5",
-      "type": "research",
+      "id": 26,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0,
       "tokens": 168276,
       "prompt": "",
       "time": "2026-06-30T12:50:10.240417+00:00"
     },
     {
-      "id": 3,
-      "task": "Setting up cost tracking system for JA & CAR operations",
-      "type": "research",
+      "id": 25,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.009181,
       "tokens": 82132,
       "prompt": "",
       "time": "2026-06-30T11:52:36.537850+00:00"
     },
     {
-      "id": 2,
-      "task": "Top 5 Edtech Companies Hong Kong",
-      "type": "other",
+      "id": 24,
+      "task": "Before-migration",
+      "type": "legacy",
       "cost": 0.009061,
       "tokens": 65575,
       "prompt": "",
