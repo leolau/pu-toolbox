@@ -7,7 +7,6 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 <title>LLM Credits Tracker</title>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -170,22 +169,26 @@
   <div id="content" style="display:none">
     <span id="pageLoadedAt" style="display:none"><script>document.write(Date.now())</script></span>
     <div class="cards" id="summaryCards"></div>
-    <div class="chart-row">
-      <div class="chart-box">
-        <h3>Daily Spending & Cumulative</h3>
-        <canvas id="dailyChart"></canvas>
-      </div>
-      <div class="chart-box">
-        <h3>By Task Type</h3>
-        <canvas id="typeChart"></canvas>
+    
+    <!-- Task breakdown -->
+    <div class="chart-box full">
+      <h3>💰 Spending by Task</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th>Task</th><th>Type</th><th>Cost</th><th>Calls</th><th>Tokens</th>
+          </tr></thead>
+          <tbody id="taskBreakdownTable"></tbody>
+        </table>
       </div>
     </div>
+
     <div class="chart-box full">
       <h3>Top 10 Most Expensive Tasks</h3>
       <div class="table-wrap">
         <table>
           <thead><tr>
-            <th>Rank</th><th>Date</th><th>Cost</th><th>Description</th><th>Tokens</th><th>Task ID</th>
+            <th>Rank</th><th>Cost</th><th>Description</th><th>Calls</th><th>Tokens</th>
           </tr></thead>
           <tbody id="topTasksTable"></tbody>
         </table>
@@ -272,21 +275,11 @@ function fmtCostShort(usd, ccy) {
 async function loadData() {
   try {
     var cacheBuster = '?_=' + Date.now();
-    var resp = await fetch("https://raw.githubusercontent.com/leolau/pu-toolbox/main/data.json" + cacheBuster);
+    var resp = await fetch("https://raw.githubusercontent.com/leolau/pu-toolbox/main/credits-data.json" + cacheBuster);
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     var data = await resp.json();
     window._lastData = data;
     
-    // Auto-refresh if this page was loaded before data was updated
-    var pageLoadedAt = document.getElementById('pageLoadedAt');
-    var loadTime = pageLoadedAt ? parseInt(pageLoadedAt.textContent) : 0;
-    var dataTime = new Date(data.updated_at + ' UTC').getTime();
-    // If page was loaded more than 60s before data was updated, refresh
-    if (dataTime > 0 && loadTime > 0 && (dataTime - loadTime) > 60000) {
-      console.log('Stale page detected, refreshing...');
-      location.reload(true);
-      return;
-    }
     document.getElementById('loading').style.display = 'none';
     document.getElementById('content').style.display = 'block';
     render(data);
@@ -304,99 +297,35 @@ function render(data) {
   applyPrefs();
   var tz = getPref('timezone', 'Asia/Hong_Kong');
   var ccy = getPref('currency', 'HKD');
-  var s = data.summary;
 
   // ── Summary cards ──
   document.getElementById('summaryCards').innerHTML =
-    '<div class="card"><div class="label">Current Balance</div><div class="value green">' +
-    fmtCostShort(s.balance != null ? s.balance : 0, ccy) + '</div></div>' +
     '<div class="card"><div class="label">Total Spent</div><div class="value gold">' +
-    fmtCostShort(s.total_cost, ccy) + '</div></div>' +
-    '<div class="card"><div class="label">Total Tasks</div><div class="value cyan">' +
-    s.total_tasks + '</div></div>' +
+    fmtCostShort(data.total_cost, ccy) + '</div></div>' +
+    '<div class="card"><div class="label">Total Calls</div><div class="value cyan">' +
+    data.total_calls + '</div></div>' +
     '<div class="card"><div class="label">Tokens Used</div><div class="value magenta">' +
-    s.total_tokens.toLocaleString() + '</div></div>';
+    data.total_tokens.toLocaleString() + '</div></div>';
 
-  // ── Daily chart ──
-  var dailyData = data.daily;
-  var ccyLabel = ccy === 'HKD' ? 'HK$' : (CURRENCY_SYMS[ccy] || '$');
-
-  if (window._dailyChart) window._dailyChart.destroy();
-  window._dailyChart = new Chart(document.getElementById('dailyChart'), {
-    type: 'bar',
-    data: {
-      labels: dailyData.map(function(d) { return fmtDate(d[0], tz); }),
-      datasets: [{
-        label: 'Daily (' + ccyLabel + ')',
-        data: dailyData.map(function(d) { return d[1] * (CURRENCY_RATES[ccy] || 1); }),
-        backgroundColor: 'rgba(200,176,128,0.3)',
-        borderColor: '#c8b080', borderWidth: 1, borderRadius: 4, order: 2
-      }, {
-        label: 'Cumulative (' + ccyLabel + ')',
-        data: dailyData.map(function(d) { return d[2] * (CURRENCY_RATES[ccy] || 1); }),
-        borderColor: '#50dcff', backgroundColor: 'rgba(80,220,255,0.05)',
-        fill: true, tension: 0.3, pointRadius: 4, pointBackgroundColor: '#50dcff', order: 1
-      }]
-    },
-    options: {
-      responsive: true, interaction: { mode: 'index', intersect: false },
-      plugins: { legend: { labels: { color: COLORS.text, font: { size: 11 } } } },
-      scales: {
-        x: { grid: { color: COLORS.grid }, ticks: { color: COLORS.text, font: { size: 11 } } },
-        y: { beginAtZero: true, grid: { color: COLORS.grid },
-          ticks: { color: COLORS.text, font: { size: 11 },
-            callback: function(v) { return ccyLabel + ' ' + v.toFixed(4); } } }
-      }
-    }
-  });
-
-  // ── Type pie chart ──
-  var typeData = data.by_type;
-  var typeColors = ['#a064ff', '#50dcff', '#c8b080', '#50d890', '#ff70b4', '#ffc850'];
-
-  if (window._typeChart) window._typeChart.destroy();
-  window._typeChart = new Chart(document.getElementById('typeChart'), {
-    type: 'doughnut',
-    data: {
-      labels: typeData.map(function(d) { return d.type; }),
-      datasets: [{
-        data: typeData.map(function(d) { return d.cost; }),
-        backgroundColor: typeColors.slice(0, typeData.length),
-        borderColor: '#0a0820', borderWidth: 2
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true,
-      plugins: {
-        legend: { position: 'bottom', labels: { color: COLORS.text, font: { size: 11 }, padding: 12 } },
-        tooltip: {
-          callbacks: {
-            label: function(ctx) {
-              var d = typeData[ctx.dataIndex];
-              return d.type + ': ' + d.count + ' tasks, ' + fmtCostShort(d.cost, ccy);
-            }
-          }
-        }
-      }
-    }
-  });
-
-  // ── Task table ──
-  var tableHtml = '';
-  data.tasks.forEach(function(t) {
-    tableHtml += '<tr>' +
-      '<td>' + fmtDate(t.date, tz) + '</td>' +
+  // ── Task breakdown ──
+  var tasks = data.tasks || [];
+  var taskHtml = '';
+  tasks.forEach(function(t) {
+    taskHtml += '<tr>' +
+      '<td>' + t.name + '</td>' +
+      '<td><span class="tag">' + (t.type || '—') + '</span></td>' +
       '<td class="cost">' + fmtCost(t.cost, ccy) + '</td>' +
-      '<td><span class="tag">' + t.type.charAt(0).toUpperCase() + t.type.slice(1) + '</span></td>' +
-      '<td>' + t.desc + '</td>' +
+      '<td>' + t.calls + '</td>' +
       '<td>' + t.tokens.toLocaleString() + '</td>' +
-      '<td>' + t.id + '</td>' +
       '</tr>';
   });
-  document.getElementById('taskTable').innerHTML = tableHtml;
+  if (tasks.length === 0) {
+    taskHtml = '<tr><td colspan="5" class="no-data">No tasks yet</td></tr>';
+  }
+  document.getElementById('taskBreakdownTable').innerHTML = taskHtml;
 
   // ── Top 10 most expensive tasks ──
-  var sortedByCost = data.tasks.slice().sort(function(a, b) { return b.cost - a.cost; });
+  var sortedByCost = tasks.slice().sort(function(a, b) { return b.cost - a.cost; });
   var top10 = sortedByCost.slice(0, 10);
   var topHtml = '';
   top10.forEach(function(t, i) {
@@ -406,15 +335,14 @@ function render(data) {
     else if (i === 2) medal = '🥉 ';
     topHtml += '<tr>' +
       '<td>' + medal + (i + 1) + '</td>' +
-      '<td>' + fmtDate(t.date, tz) + '</td>' +
       '<td class="cost">' + fmtCost(t.cost, ccy) + '</td>' +
-      '<td>' + t.desc + '</td>' +
+      '<td>' + t.name + '</td>' +
+      '<td>' + t.calls + ' calls</td>' +
       '<td>' + t.tokens.toLocaleString() + '</td>' +
-      '<td>' + t.id + '</td>' +
       '</tr>';
   });
   if (top10.length === 0) {
-    topHtml = '<tr><td colspan="6" style="text-align:center;color:#504060;padding:20px">No tasks yet</td></tr>';
+    topHtml = '<tr><td colspan="5" class="no-data">No tasks yet</td></tr>';
   }
   document.getElementById('topTasksTable').innerHTML = topHtml;
 
