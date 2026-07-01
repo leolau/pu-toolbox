@@ -180,6 +180,17 @@
       </div>
     </div>
     <div class="chart-box full">
+      <h3>Top 10 Most Expensive Tasks</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th>Rank</th><th>Date</th><th>Task ID</th><th>Description</th><th>Tokens</th><th>Cost</th>
+          </tr></thead>
+          <tbody id="topTasksTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="chart-box full">
       <h3>Task History</h3>
       <div class="table-wrap">
         <table>
@@ -371,6 +382,29 @@ function render(data) {
       '</tr>';
   });
   document.getElementById('taskTable').innerHTML = tableHtml;
+
+  // ── Top 10 most expensive tasks ──
+  var sortedByCost = data.tasks.slice().sort(function(a, b) { return b.cost - a.cost; });
+  var top10 = sortedByCost.slice(0, 10);
+  var topHtml = '';
+  top10.forEach(function(t, i) {
+    var medal = '';
+    if (i === 0) medal = '🥇 ';
+    else if (i === 1) medal = '🥈 ';
+    else if (i === 2) medal = '🥉 ';
+    topHtml += '<tr>' +
+      '<td>' + medal + (i + 1) + '</td>' +
+      '<td>' + fmtDate(t.date, tz) + '</td>' +
+      '<td>' + t.id + '</td>' +
+      '<td>' + t.desc + '</td>' +
+      '<td>' + t.tokens.toLocaleString() + '</td>' +
+      '<td class="cost">' + fmtCost(t.cost, ccy) + '</td>' +
+      '</tr>';
+  });
+  if (top10.length === 0) {
+    topHtml = '<tr><td colspan="6" style="text-align:center;color:#504060;padding:20px">No tasks yet</td></tr>';
+  }
+  document.getElementById('topTasksTable').innerHTML = topHtml;
 
   // ── Timestamp ──
   document.getElementById('updatedAt').textContent = 'Last updated: ' + (data.updated_at || 'unknown') +
