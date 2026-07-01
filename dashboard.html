@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cost Dashboard</title>
+<title>LLM Credits Tracker</title>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -21,7 +21,49 @@
     -webkit-text-fill-color: transparent;
     margin-bottom: 8px;
   }
-  .subtitle { color: #706080; font-size: 14px; margin-bottom: 30px; }
+  .subtitle { color: #706080; font-size: 14px; margin-bottom: 16px; }
+
+  /* Preferences bar */
+  .prefs {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .pref-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(20,15,40,0.5);
+    border: 1px solid rgba(160,100,255,0.08);
+    border-radius: 10px;
+    padding: 8px 14px;
+  }
+  .pref-group label {
+    font-size: 12px;
+    color: #605070;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .pref-group select {
+    background: rgba(10,8,32,0.8);
+    color: #c8c0d0;
+    border: 1px solid rgba(160,100,255,0.15);
+    border-radius: 6px;
+    padding: 4px 8px;
+    font-size: 13px;
+    cursor: pointer;
+    outline: none;
+  }
+  .pref-group select:hover {
+    border-color: rgba(160,100,255,0.3);
+  }
+  .pref-group select option {
+    background: #0a0820;
+    color: #c8c0d0;
+  }
+
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -84,8 +126,38 @@
 </head>
 <body>
 <div class="container">
-  <h1>Cost Dashboard</h1>
-  <p class="subtitle">LLM spending tracker · Data fetched live</p>
+  <h1>LLM Credits Tracker</h1>
+  <p class="subtitle">Real-time spending tracker</p>
+
+  <div class="prefs">
+    <div class="pref-group">
+      <label for="tzSelect">Timezone</label>
+      <select id="tzSelect" onchange="onPrefChange()">
+        <option value="Asia/Hong_Kong">Hong Kong (UTC+8)</option>
+        <option value="Asia/Tokyo">Tokyo (UTC+9)</option>
+        <option value="Asia/Singapore">Singapore (UTC+8)</option>
+        <option value="Asia/Shanghai">Shanghai (UTC+8)</option>
+        <option value="America/New_York">New York (UTC-5)</option>
+        <option value="America/Los_Angeles">Los Angeles (UTC-8)</option>
+        <option value="Europe/London">London (UTC+0)</option>
+        <option value="Europe/Berlin">Berlin (UTC+1)</option>
+        <option value="Pacific/Auckland">Auckland (UTC+12)</option>
+        <option value="UTC">UTC</option>
+      </select>
+    </div>
+    <div class="pref-group">
+      <label for="ccySelect">Currency</label>
+      <select id="ccySelect" onchange="onPrefChange()">
+        <option value="HKD">HK$ HKD</option>
+        <option value="USD">$ USD</option>
+        <option value="CNY">¥ CNY</option>
+        <option value="EUR">€ EUR</option>
+        <option value="JPY">¥ JPY</option>
+        <option value="GBP">£ GBP</option>
+        <option value="SGD">S$ SGD</option>
+      </select>
+    </div>
+  </div>
 
   <div id="loading" class="loading">
     <div class="spinner">⌛</div>
@@ -123,17 +195,71 @@
 </div>
 
 <script>
-const COLORS = {
-  gold: '#c8b080', cyan: '#50dcff', magenta: '#ff70b4',
-  green: '#50d890', purple: '#a064ff',
-  grid: 'rgba(160,100,255,0.06)', text: '#706080'
+// ── Preferences ──
+const CURRENCY_RATES = {
+  USD: 1,     HKD: 7.8,  CNY: 7.2,
+  EUR: 0.92,  JPY: 158,  GBP: 0.79,  SGD: 1.34
+};
+const CURRENCY_SYMS = {
+  USD: '$', HKD: 'HK$', CNY: '¥', EUR: '€', JPY: '¥', GBP: '£', SGD: 'S$'
 };
 
+function getPref(key, fallback) {
+  return localStorage.getItem('tracker_' + key) || fallback;
+}
+function setPref(key, val) {
+  localStorage.setItem('tracker_' + key, val);
+}
+
+function applyPrefs() {
+  var tz = getPref('timezone', 'Asia/Hong_Kong');
+  var ccy = getPref('currency', 'HKD');
+  document.getElementById('tzSelect').value = tz;
+  document.getElementById('ccySelect').value = ccy;
+}
+
+function onPrefChange() {
+  var tz = document.getElementById('tzSelect').value;
+  var ccy = document.getElementById('ccySelect').value;
+  setPref('timezone', tz);
+  setPref('currency', ccy);
+  // Re-render with new settings
+  if (window._lastData) render(window._lastData);
+}
+
+function fmtDate(dateStr, tz) {
+  var d = new Date(dateStr + 'T00:00:00Z');
+  try {
+    return d.toLocaleDateString('en-CA', { timeZone: tz, year:'numeric', month:'2-digit', day:'2-digit' });
+  } catch(e) {
+    return dateStr;
+  }
+}
+
+function fmtCost(usd, ccy) {
+  var rate = CURRENCY_RATES[ccy] || 1;
+  var sym = CURRENCY_SYMS[ccy] || '$';
+  var val = usd * rate;
+  if (ccy === 'JPY') return sym + ' ' + Math.round(val).toLocaleString();
+  if (ccy === 'HKD') return sym + ' ' + val.toFixed(4);
+  return sym + ' ' + val.toFixed(4);
+}
+
+function fmtCostShort(usd, ccy) {
+  var rate = CURRENCY_RATES[ccy] || 1;
+  var sym = CURRENCY_SYMS[ccy] || '$';
+  var val = usd * rate;
+  if (ccy === 'JPY') return sym + ' ' + Math.round(val).toLocaleString();
+  return sym + ' ' + val.toFixed(2);
+}
+
+// ── Data Loading ──
 async function loadData() {
   try {
-    const resp = await fetch("https://leolau.github.io/pu-toolbox/data.json");
+    var resp = await fetch("https://leolau.github.io/pu-toolbox/data.json");
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    const data = await resp.json();
+    var data = await resp.json();
+    window._lastData = data;
     document.getElementById('loading').style.display = 'none';
     document.getElementById('content').style.display = 'block';
     render(data);
@@ -148,34 +274,39 @@ async function loadData() {
 }
 
 function render(data) {
-  const s = data.summary;
+  applyPrefs();
+  var tz = getPref('timezone', 'Asia/Hong_Kong');
+  var ccy = getPref('currency', 'HKD');
+  var s = data.summary;
 
-  // Summary cards
+  // ── Summary cards ──
   document.getElementById('summaryCards').innerHTML =
-    '<div class="card"><div class="label">Current Balance</div><div class="value green">$' +
-    (s.balance != null ? s.balance.toFixed(2) : '--') +
-    '</div></div>' +
-    '<div class="card"><div class="label">Total Spent</div><div class="value gold">$' +
-    s.total_cost.toFixed(4) + '</div></div>' +
+    '<div class="card"><div class="label">Current Balance</div><div class="value green">' +
+    fmtCostShort(s.balance != null ? s.balance : 0, ccy) + '</div></div>' +
+    '<div class="card"><div class="label">Total Spent</div><div class="value gold">' +
+    fmtCostShort(s.total_cost, ccy) + '</div></div>' +
     '<div class="card"><div class="label">Total Tasks</div><div class="value cyan">' +
     s.total_tasks + '</div></div>' +
     '<div class="card"><div class="label">Tokens Used</div><div class="value magenta">' +
     s.total_tokens.toLocaleString() + '</div></div>';
 
-  // Daily chart
-  const dailyData = data.daily;
-  new Chart(document.getElementById('dailyChart'), {
+  // ── Daily chart ──
+  var dailyData = data.daily;
+  var ccyLabel = ccy === 'HKD' ? 'HK$' : (CURRENCY_SYMS[ccy] || '$');
+
+  if (window._dailyChart) window._dailyChart.destroy();
+  window._dailyChart = new Chart(document.getElementById('dailyChart'), {
     type: 'bar',
     data: {
-      labels: dailyData.map(function(d) { return d[0]; }),
+      labels: dailyData.map(function(d) { return fmtDate(d[0], tz); }),
       datasets: [{
-        label: 'Daily ($)',
-        data: dailyData.map(function(d) { return d[1]; }),
+        label: 'Daily (' + ccyLabel + ')',
+        data: dailyData.map(function(d) { return d[1] * (CURRENCY_RATES[ccy] || 1); }),
         backgroundColor: 'rgba(200,176,128,0.3)',
         borderColor: '#c8b080', borderWidth: 1, borderRadius: 4, order: 2
       }, {
-        label: 'Cumulative ($)',
-        data: dailyData.map(function(d) { return d[2]; }),
+        label: 'Cumulative (' + ccyLabel + ')',
+        data: dailyData.map(function(d) { return d[2] * (CURRENCY_RATES[ccy] || 1); }),
         borderColor: '#50dcff', backgroundColor: 'rgba(80,220,255,0.05)',
         fill: true, tension: 0.3, pointRadius: 4, pointBackgroundColor: '#50dcff', order: 1
       }]
@@ -187,15 +318,17 @@ function render(data) {
         x: { grid: { color: COLORS.grid }, ticks: { color: COLORS.text, font: { size: 11 } } },
         y: { beginAtZero: true, grid: { color: COLORS.grid },
           ticks: { color: COLORS.text, font: { size: 11 },
-            callback: function(v) { return '$' + v.toFixed(4); } } }
+            callback: function(v) { return ccyLabel + ' ' + v.toFixed(4); } } }
       }
     }
   });
 
-  // Type pie chart
-  const typeData = data.by_type;
-  const typeColors = ['#a064ff', '#50dcff', '#c8b080', '#50d890', '#ff70b4', '#ffc850'];
-  new Chart(document.getElementById('typeChart'), {
+  // ── Type pie chart ──
+  var typeData = data.by_type;
+  var typeColors = ['#a064ff', '#50dcff', '#c8b080', '#50d890', '#ff70b4', '#ffc850'];
+
+  if (window._typeChart) window._typeChart.destroy();
+  window._typeChart = new Chart(document.getElementById('typeChart'), {
     type: 'doughnut',
     data: {
       labels: typeData.map(function(d) { return d.type; }),
@@ -213,7 +346,7 @@ function render(data) {
           callbacks: {
             label: function(ctx) {
               var d = typeData[ctx.dataIndex];
-              return d.type + ': ' + d.count + ' tasks, $' + d.cost.toFixed(4);
+              return d.type + ': ' + d.count + ' tasks, ' + fmtCostShort(d.cost, ccy);
             }
           }
         }
@@ -221,24 +354,33 @@ function render(data) {
     }
   });
 
-  // Task table
+  // ── Task table ──
   var tableHtml = '';
   data.tasks.forEach(function(t) {
     tableHtml += '<tr>' +
-      '<td>' + t.date + '</td>' +
+      '<td>' + fmtDate(t.date, tz) + '</td>' +
       '<td>' + t.id + '</td>' +
       '<td><span class="tag">' + t.type.charAt(0).toUpperCase() + t.type.slice(1) + '</span></td>' +
       '<td>' + t.desc + '</td>' +
       '<td>' + t.tokens.toLocaleString() + '</td>' +
-      '<td class="cost">$' + t.cost.toFixed(6) + '</td>' +
+      '<td class="cost">' + fmtCost(t.cost, ccy) + '</td>' +
       '</tr>';
   });
   document.getElementById('taskTable').innerHTML = tableHtml;
 
-  // Timestamp
-  document.getElementById('updatedAt').textContent = 'Last updated: ' + (data.updated_at || 'unknown');
+  // ── Timestamp ──
+  document.getElementById('updatedAt').textContent = 'Last updated: ' + (data.updated_at || 'unknown') +
+    ' · Preferences saved locally';
 }
 
+// ── Init ──
+const COLORS = {
+  gold: '#c8b080', cyan: '#50dcff', magenta: '#ff70b4',
+  green: '#50d890', purple: '#a064ff',
+  grid: 'rgba(160,100,255,0.06)', text: '#706080'
+};
+
+applyPrefs();
 loadData();
 </script>
 </body>
