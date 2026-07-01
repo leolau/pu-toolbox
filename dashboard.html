@@ -185,7 +185,7 @@
       <div class="table-wrap">
         <table>
           <thead><tr>
-            <th>Rank</th><th>Date</th><th>Task ID</th><th>Description</th><th>Tokens</th><th>Cost</th>
+            <th>Rank</th><th>Date</th><th>Cost</th><th>Description</th><th>Tokens</th><th>Task ID</th>
           </tr></thead>
           <tbody id="topTasksTable"></tbody>
         </table>
@@ -407,10 +407,10 @@ function render(data) {
     topHtml += '<tr>' +
       '<td>' + medal + (i + 1) + '</td>' +
       '<td>' + fmtDate(t.date, tz) + '</td>' +
-      '<td>' + t.id + '</td>' +
+      '<td class="cost">' + fmtCost(t.cost, ccy) + '</td>' +
       '<td>' + t.desc + '</td>' +
       '<td>' + t.tokens.toLocaleString() + '</td>' +
-      '<td class="cost">' + fmtCost(t.cost, ccy) + '</td>' +
+      '<td>' + t.id + '</td>' +
       '</tr>';
   });
   if (top10.length === 0) {
