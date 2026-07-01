@@ -209,14 +209,15 @@ function render() {
   var d = configData;
   if (!d) return;
 
-  // Phones
+  // Phones with toggle buttons
   var phonesHtml = '';
-  d.phones.forEach(function(p) {
-    phonesHtml += '<div class="config-row">' +
-      '<span class="val">' + escapeHtml(p.label) + '</span>' +
-      '<span class="val">' + escapeHtml(p.number) + '</span>' +
-      '<span class="val" style="font-size:12px;color:' + (p.enabled ? '#25D366' : '#605070') + '">' + (p.enabled ? '✅ Enabled' : '❌ Disabled') + '</span>' +
-      '</div>';
+  d.phones.forEach(function(p, i) {
+    var enabled = p.enabled;
+    phonesHtml += '<div class="phone-card" style="display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid rgba(160,100,255,0.04)">' +
+      '<div><span class="val" style="font-weight:600">' + escapeHtml(p.label) + '</span><br><span style="font-size:12px;color:#605070">' + escapeHtml(p.number) + '</span></div>' +
+      '<button onclick="togglePhone(' + i + ')" style="padding:8px 20px;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;transition:all 0.2s;' +
+      (enabled ? 'background:#25D366;color:#0a0820' : 'background:#302840;color:#605070') + '">' +
+      (enabled ? '✅ Enabled' : '❌ Disabled') + '</button></div>';
   });
   document.getElementById('phonesContainer').innerHTML = phonesHtml;
 
@@ -275,8 +276,14 @@ function deleteContact(idx) {
   markChange();
 }
 
+function togglePhone(idx) {
+  configData.phones[idx].enabled = !configData.phones[idx].enabled;
+  render(); // re-render the whole page
+  markChange();
+}
+
 async function saveConfig() {
-  // Read values from inputs
+  // Read values from contact inputs
   var inputs = document.querySelectorAll('#contactsContainer input');
   inputs.forEach(function(inp) {
     var idx = parseInt(inp.dataset.idx);
