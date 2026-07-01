@@ -186,14 +186,6 @@ function loadConfig() {
   configData = JSON.parse(JSON.stringify(EMBEDDED_CONFIG));
   document.getElementById('loading').style.display = 'none';
   document.getElementById('content').style.display = 'block';
-
-  if (!IS_LOCAL) {
-    document.getElementById('readonlyNote').style.display = 'block';
-    document.getElementById('addContactBtn').style.display = 'none';
-    document.getElementById('saveBtn').style.display = 'none';
-    document.getElementById('restartBtn').style.display = 'none';
-  }
-
   render();
 }
 
@@ -240,10 +232,10 @@ function renderContacts() {
   var html = '';
   contacts.forEach(function(c, i) {
     html += '<div class="contact-card" data-idx="' + i + '">' +
-      '<div class="field"><label>Name</label><input type="text" value="' + escapeHtml(c.name) + '" data-field="name" data-idx="' + i + '" onchange="markChange()"' + (IS_LOCAL ? '' : ' readonly') + '></div>' +
-      '<div class="field"><label>Relation</label><input type="text" value="' + escapeHtml(c.relation) + '" data-field="relation" data-idx="' + i + '" onchange="markChange()"' + (IS_LOCAL ? '' : ' readonly') + '></div>' +
-      '<div class="field"><label>Phone</label><input type="text" value="' + escapeHtml(c.phone) + '" data-field="phone" data-idx="' + i + '" onchange="markChange()"' + (IS_LOCAL ? '' : ' readonly') + '></div>' +
-      (IS_LOCAL ? '<button class="del-btn" onclick="deleteContact(' + i + ')">✕ Remove</button>' : '<div style="min-width:20px"></div>') +
+      '<div class="field"><label>Name</label><input type="text" value="' + escapeHtml(c.name) + '" data-field="name" data-idx="' + i + '" onchange="markChange()"></div>' +
+      '<div class="field"><label>Relation</label><input type="text" value="' + escapeHtml(c.relation) + '" data-field="relation" data-idx="' + i + '" onchange="markChange()"></div>' +
+      '<div class="field"><label>Phone</label><input type="text" value="' + escapeHtml(c.phone) + '" data-field="phone" data-idx="' + i + '" onchange="markChange()"></div>' +
+      '<button class="del-btn" onclick="deleteContact(' + i + ')">✕ Remove</button>' +
       '</div>';
   });
   document.getElementById('contactsContainer').innerHTML = html;
@@ -286,6 +278,7 @@ async function saveConfig() {
   });
 
   var statusEl = document.getElementById('saveStatus');
+  // Try local API server first
   try {
     var resp = await fetch(SAVE_URL, {
       method: 'POST',
@@ -294,12 +287,17 @@ async function saveConfig() {
     });
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     statusEl.className = 'save-status success';
-    statusEl.textContent = '✅ Saved successfully!';
+    statusEl.textContent = '✅ Saved to config.json! Tell me to sync to GitHub.';
     hasChanges = false;
-    document.getElementById('saveHint').textContent = 'Saved';
+    document.getElementById('saveHint').textContent = 'Saved - ask agent to sync';
   } catch(e) {
+    // Remote access - show the JSON for the user to copy
+    var jsonStr = JSON.stringify(configData, null, 2);
     statusEl.className = 'save-status error';
-    statusEl.textContent = '❌ Save failed: ' + e.message;
+    statusEl.innerHTML = '❌ Cannot reach local server. Copy this and send it to me:<br><br>' +
+      '<textarea style="width:100%;height:200px;background:#0a0820;color:#c8c0d0;border:1px solid rgba(160,100,255,0.15);border-radius:8px;padding:12px;font-size:12px;font-family:monospace" readonly>' +
+      escapeHtml(jsonStr) + '</textarea><br><br>' +
+      '<span style="color:#706080">Send this to me and I\'ll apply it for you.</span>';
   }
   setTimeout(function() { statusEl.style.display = 'none'; }, 3000);
 }
