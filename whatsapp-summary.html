@@ -24,6 +24,10 @@
   .updated { color: #504060; font-size: 12px; text-align: center; margin-bottom: 30px; }
   .back-link { display: inline-block; color: #25D366; cursor: pointer; font-size: 13px; margin-bottom: 16px; }
   .back-link:hover { text-decoration: underline; }
+  .loading { text-align: center; padding: 80px 20px; color: #504060; }
+  .loading .spinner { font-size: 40px; margin-bottom: 16px; animation: spin 2s linear infinite; }
+  @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  .error { text-align: center; padding: 60px; color: #805050; }
 
   .cards {
     display: grid;
@@ -81,6 +85,11 @@
     font-size: 11px;
     font-weight: 600;
   }
+  .phone-tag {
+    display: inline-block; padding: 1px 8px; border-radius: 100px;
+    font-size: 10px; background: rgba(37,211,102,0.08); color: #25D366;
+    margin-left: 4px;
+  }
 
   .section-title {
     font-size: 14px; color: #9080a0; text-transform: uppercase;
@@ -110,7 +119,6 @@
     display: inline-block; padding: 2px 10px; border-radius: 100px;
     font-size: 11px; background: rgba(160,100,255,0.1); color: #a064ff;
   }
-  .tag.group { background: rgba(37,211,102,0.1); color: #25D366; }
   .chat-name { font-size: 12px; color: #706080; }
   .sender-name { color: #d0c8e0; font-weight: 500; }
   .no-data { text-align: center; color: #504060; padding: 40px; }
@@ -120,120 +128,86 @@
 <body>
 <div class="container" id="app">
   <h1>💬 WhatsApp Summary</h1>
-  <p class="subtitle">Incoming messages captured via WhatsApp bridge</p>
+  <p class="subtitle" id="subtitle">Incoming messages captured via WhatsApp bridge</p>
   <p class="updated" id="updatedAt"></p>
 
-  <div id="summaryCardsContainer">
+  <div id="loading" class="loading">
+    <div class="spinner">⌛</div>
+    Loading WhatsApp data...
+  </div>
+
+  <div id="content" style="display:none">
     <div class="cards" id="summaryCards"></div>
 
     <h2 class="section-title">📊 Period Breakdown</h2>
     <p class="filter-hint">Click a sender name to see their messages</p>
     <div class="periods" id="periodsContainer"></div>
 
-    <h2 class="section-title" id="messagesTitle">📜 Last 30 Messages</h2>
+    <h2 class="section-title" id="messagesTitle">📜 Recent Messages</h2>
     <div class="table-wrap" id="messagesWrap">
       <table>
         <thead><tr>
-          <th>Time</th><th>Sender</th><th>Chat</th><th>Message</th><th>Media</th>
+          <th>Time</th><th>Sender</th><th>Phone</th><th>Chat</th><th>Message</th><th>Media</th>
         </tr></thead>
         <tbody id="messagesTable"></tbody>
       </table>
     </div>
   </div>
+
+  <div id="error" class="error" style="display:none"></div>
 </div>
 
 <script>
-// ── Embedded message data ──
-const MESSAGES_DATA = [{"id":"msg_1782910066024","timestamp":1782910065,"received_at":"2026-07-01T12:47:46.024Z","sender":{"id":"unknown","name":"Vilson Hoo","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"Happy Blessed Birthday to Azreen 😊🎂💐🎉@140256603025553","type":"text"},"media":null,"raw":{"messageId":"ACD13FDB648A1C98B1B74E0B49093940","chatId":"120363026848238012@g.us","senderId":"35111491919902@lid","senderName":"Vilson Hoo","chatName":"120363026848238012","isGroup":true,"body":"Happy Blessed Birthday to Azreen 😊🎂💐🎉@140256603025553","hasMedia":true,"mediaType":"image","mediaUrls":[],"mentionedIds":["140256603025553@lid"],"quotedMessageId":null,"quotedParticipant":null,"quotedRemoteJid":null,"hasQuotedMessage":false,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910065}},{"id":"msg_1782910163907","timestamp":1782910163,"received_at":"2026-07-01T12:49:23.907Z","sender":{"id":"unknown","name":"CS Yu, Vivienne","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"Hi Leanne. \nWe have yet to have a chance to meet.  😀","type":"text"},"media":null,"raw":{"messageId":"AC7FDEAC644554B90C1FE4749241A3DC","chatId":"120363026848238012@g.us","senderId":"20500466143484@lid","senderName":"CS Yu, Vivienne","chatName":"120363026848238012","isGroup":true,"body":"Hi Leanne. \nWe have yet to have a chance to meet.  😀","hasMedia":false,"mediaType":"","mediaUrls":[],"mentionedIds":[],"quotedMessageId":"A5BA8175728122FBA0F2F1576823B677","quotedParticipant":"182274654007523@lid","quotedRemoteJid":null,"hasQuotedMessage":true,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910163}},{"id":"msg_1782910178450","timestamp":1782910177,"received_at":"2026-07-01T12:49:38.450Z","sender":{"id":"unknown","name":"CS Yu, Vivienne","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"Thank you, Joseph.","type":"text"},"media":null,"raw":{"messageId":"AC4094E9BDCCD43B9B5307E06B65DFC0","chatId":"120363026848238012@g.us","senderId":"20500466143484@lid","senderName":"CS Yu, Vivienne","chatName":"120363026848238012","isGroup":true,"body":"Thank you, Joseph.","hasMedia":false,"mediaType":"","mediaUrls":[],"mentionedIds":[],"quotedMessageId":"A5FFCD3779AAA731CE8366287AF5F5CA","quotedParticipant":"147923035799748@lid","quotedRemoteJid":null,"hasQuotedMessage":true,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910177}},{"id":"msg_1782910181141","timestamp":1782910180,"received_at":"2026-07-01T12:49:41.141Z","sender":{"id":"unknown","name":"Chiyoga","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"[image received]","type":"text"},"media":null,"raw":{"messageId":"A56E89B8305032DF616B0227C27E7FFA","chatId":"120363026848238012@g.us","senderId":"46867337465948@lid","senderName":"Chiyoga","chatName":"120363026848238012","isGroup":true,"body":"[image received]","hasMedia":true,"mediaType":"image","mediaUrls":[],"mentionedIds":[],"quotedMessageId":null,"quotedParticipant":null,"quotedRemoteJid":null,"hasQuotedMessage":false,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910180}},{"id":"msg_1782910182059","timestamp":1782910181,"received_at":"2026-07-01T12:49:42.059Z","sender":{"id":"unknown","name":"Chiyoga","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"[image received]","type":"text"},"media":null,"raw":{"messageId":"A517814F7A9507F07A1BA189F2DBE1FE","chatId":"120363026848238012@g.us","senderId":"46867337465948@lid","senderName":"Chiyoga","chatName":"120363026848238012","isGroup":true,"body":"[image received]","hasMedia":true,"mediaType":"image","mediaUrls":[],"mentionedIds":[],"quotedMessageId":null,"quotedParticipant":null,"quotedRemoteJid":null,"hasQuotedMessage":false,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910181}},{"id":"msg_1782910182765","timestamp":1782910182,"received_at":"2026-07-01T12:49:42.765Z","sender":{"id":"unknown","name":"Chiyoga","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"Happening now~ Welcome to join us!","type":"text"},"media":null,"raw":{"messageId":"A5DA788A369004055A7D10BDE9D0D49A","chatId":"120363026848238012@g.us","senderId":"46867337465948@lid,"senderName":"Chiyoga","chatName":"120363026848238012","isGroup":true,"body":"Happening now~ Welcome to join us!","hasMedia":false,"mediaType":"","mediaUrls":[],"mentionedIds":[],"quotedMessageId":null,"quotedParticipant":null,"quotedRemoteJid":null,"hasQuotedMessage":false,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910182}},{"id":"msg_1782910183562","timestamp":1782910182,"received_at":"2026-07-01T12:49:43.562Z","sender":{"id":"unknown","name":"Chiyoga","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"[image received]","type":"text"},"media":null,"raw":{"messageId":"A54948DD29C00847DF6815594F13AE91","chatId":"120363026848238012@g.us","senderId":"46867337465948@lid","senderName":"Chiyoga","chatName":"120363026848238012","isGroup":true,"body":"[image received]","hasMedia":true,"mediaType":"image","mediaUrls":[],"mentionedIds":[],"quotedMessageId":null,"quotedParticipant":null,"quotedRemoteJid":null,"hasQuotedMessage":false,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910182}},{"id":"msg_1782910184287","timestamp":1782910183,"received_at":"2026-07-01T12:49:44.287Z","sender":{"id":"unknown","name":"Chiyoga","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"💪 *THE FITNESS ADVANTAGE*\n*_The Hidden Link Between Fitness, Performance & A More Secure Future_*\n\nMost people don't suddenly lose their health.\n\nIt happens slowly.\n\n- ❌ _Less movement_\n- ❌ _More stress_\n- ❌ _Lower energy_\n- ❌ _Poor sleep_\n- ❌ _Weight gain_\n- ❌ _Aches and pains that become normal_\n\nThe choices you make today will shape the quality of your future.\n\nJoin us for an engaging E3 Wellness Webinar featuring:\n\n- 🎤 *Marcus Woon* *_Founder, Evolve with Marcus_*\n\nMarcus helps individuals create sustainable lifestyle changes through fitness, strength development, mobility, and healthy habits that support long-term wellbeing.\n\nIn this session, you will learn:- ✅ _The hidden impact of fitness on your health, productivity, and future wellbeing_\n✅ _Simple habits to improve energy, strength, and vitality_\n✅ _Practical strategies that fit into busy lifestyles_\n✅ _Why investing in your health today creates benefits for years to come_\n\n━━━━━━━━━━━━━━━\n\n📅 *Date:* 1 July 2026\n⏰ *Time:* 8:30 PM – 9:30 PM\n📍 *Platform:* Zoom\n\n🎟 *Registration:*\n[https://eventsize.com/event/the-fitness-advantage]\n\n━━━━━━━━━━━━━━━\n\nYour future health is not decided tomorrow.\n\n- _It is built by the habits you practice today._\n\n💙❤️ *Reserve your seat and discover your Fitness Advantage.*","type":"text"},"media":null,"raw":{"messageId":"A5375D2380EE84D921CC185786A4AF02","chatId":"120363026848238012@g.us","senderId":"46867337465948@lid","senderName":"Chiyoga","chatName":"120363026848238012","isGroup":true,"body":"💪 *THE FITNESS ADVANTAGE*\n*_The Hidden Link Between Fitness, Performance & A More Secure Future_*\n\nMost people don't suddenly lose their health.\n\nIt happens slowly.\n\n- ❌ _Less movement_\n- ❌ _More stress_\n- ❌ _Lower energy_\n- ❌ _Poor sleep_\n- ❌ _Weight gain_\n- ❌ _Aches and pains that become normal_\n\nThe choices you make today will shape the quality of your future.\n\nJoin us for an engaging E3 Wellness Webinar featuring:\n\n- 🎤 *Marcus Woon* *_Founder, Evolve with Marcus_*\n\nMarcus helps individuals create sustainable lifestyle changes through fitness, strength development, mobility, and healthy habits that support long-term wellbeing.\n\nIn this session, you will learn:- ✅ _The hidden impact of fitness on your health, productivity, and future wellbeing_\n✅ _Simple habits to improve energy, strength, and vitality_\n✅ _Practical strategies that fit into busy lifestyles_\n✅ _Why investing in your health today creates benefits for years to come_\n\n━━━━━━━━━━━━━━━\n\n📅 *Date:* 1 July 2026\n⏰ *Time:* 8:30 PM – 9:30 PM\n📍 *Platform:* Zoom\n\n🎟 *Registration:*\n[https://eventsize.com/event/the-fitness-advantage]\n\n━━━━━━━━━━━━━━━\n\nYour future health is not decided tomorrow.\n\n- _It is built by the habits you practice today._\n\n💙❤️ *Reserve your seat and discover your Fitness Advantage.*","hasMedia":false,"mediaType":"","mediaUrls":[],"mentionedIds":[],"quotedMessageId":null,"quotedParticipant":null,"quotedRemoteJid":null,"hasQuotedMessage":false,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910183}},{"id":"msg_1782910272286","timestamp":1782910271,"received_at":"2026-07-01T12:51:12.286Z","sender":{"id":"unknown","name":"Leanne Kommons Realty","phone":""},"chat":{"id":"120363026848238012@g.us","is_group":true},"message":{"text":"Soon!!","type":"text"},"media":null,"raw":{"messageId":"A59026FE0F3D2838526699E8381F5088","chatId":"120363026848238012@g.us","senderId":"182274654007523@lid","senderName":"Leanne Kommons Realty","chatName":"120363026848238012","isGroup":true,"body":"Soon!!","hasMedia":false,"mediaType":"","mediaUrls":[],"mentionedIds":[],"quotedMessageId":"AC7FDEAC644554B90C1FE4749241A3DC","quotedParticipant":"20500466143484@lid","quotedRemoteJid":null,"hasQuotedMessage":true,"botIds":["85251922892@51@s.whatsapp.net","90993328168991@51@lid"],"timestamp":1782910271}}];
+// Cache-busting URL for data
+const DATA_URL = 'https://leolau.github.io/pu-toolbox/whatsapp-data.json?_=' + Date.now();
 
 // ── Helpers ──
-const NOW = new Date('2026-07-01T12:53:00Z');
-const SEVEN_DAYS_AGO = new Date(NOW.getTime() - 7 * 86400000);
-const FOUR_WEEKS_AGO = new Date(NOW.getTime() - 28 * 86400000);
-const SIX_MONTHS_AGO = new Date(NOW.getTime() - 180 * 86400000);
-
-const PERIODS = [
-  { label: 'Past 7 Days', cutoff: SEVEN_DAYS_AGO, id: '7d' },
-  { label: 'Past 4 Weeks', cutoff: FOUR_WEEKS_AGO, id: '4w' },
-  { label: 'Past 6 Months', cutoff: SIX_MONTHS_AGO, id: '6m' },
-];
-
-const LOCAL_BASE = (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
-  ? location.origin + '/' : null;
-
 function fmtDateShort(ts) {
-  const d = new Date(ts * 1000);
+  var d = typeof ts === 'number' ? new Date(ts * 1000) : new Date(ts);
+  if (isNaN(d.getTime())) d = new Date();
   return d.toLocaleString('en-CA', { timeZone:'Asia/Hong_Kong',
     month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' });
 }
 
 function escapeHtml(text) {
-  const div = document.createElement('div');
+  var div = document.createElement('div');
   div.textContent = text || '';
   return div.innerHTML;
 }
 
-function getSenderKey(m) {
-  const name = m.raw?.senderName || m.sender?.name || 'Unknown';
-  const id = m.raw?.senderId || m.sender?.id || '';
-  return escapeHtml(name) + '::' + id;
-}
-
-function getSenderName(m) {
-  return m.raw?.senderName || m.sender?.name || 'Unknown';
-}
-
 function getChatDisplay(m) {
-  const chatName = m.raw?.chatName || '';
-  const isGroup = m.raw?.isGroup || m.chat?.is_group || false;
-  const chatId = m.raw?.chatId || m.chat?.id || '';
-  const display = chatName || chatId.replace(/@.*/, '') || 'Unknown';
-  const tag = isGroup ? '👥 ' : '💬 ';
-  return tag + display;
+  var chat = m.chat || {};
+  var name = chat.name || chat.id || '';
+  var isGroup = chat.is_group || false;
+  return (isGroup ? '👥 ' : '💬 ') + (name || 'Unknown');
 }
 
-function hasMedia(m) {
-  const urls = m.raw?.mediaUrls || [];
-  return urls.length > 0 || m.raw?.hasMedia || !!(m.message?.text || '').match(/^\[(image|video|audio|document)/);
-}
-
-function getMediaType(m) {
-  return m.raw?.mediaType || (m.message?.text || '').match(/^\[(\w+)/)?.[1] || '';
-}
-
-function mediaUrl(m) {
-  const urls = m.raw?.mediaUrls || [];
-  return urls;
-}
-
-function buildMediaLinks(m) {
-  const urls = m.raw?.mediaUrls || [];
+function getMediaLinks(m) {
+  var media = m.media || {};
+  var urls = media.urls || [];
   if (urls.length === 0) {
-    // No file URLs, show type indicator
-    const mt = getMediaType(m);
-    return mt ? '📎 ' + mt : '—';
+    return media.has_media ? '📎 ' + (media.type || 'media') : '—';
   }
-  return urls.map((url, i) => {
-    const filename = url.split('/').pop();
-    const mt = getMediaType(m) || filename.split('.').pop() || 'file';
-    // Build absolute URL if local server is available
-    const href = LOCAL_BASE ? LOCAL_BASE + url : url;
-    const icon = mt.startsWith('image') ? '🖼️' : mt.startsWith('audio') ? '🔊' : mt.startsWith('video') ? '🎬' : '📎';
-    const label = urls.length > 1 ? (icon + ' ' + mt + ' #' + (i+1)) : (icon + ' ' + mt);
-    return '<a href="' + escapeHtml(href) + '" target="_blank" class="media-link">' + label + '</a>';
+  return urls.map(function(url, i) {
+    var filename = url.split('/').pop();
+    var icon = (media.type || '').startsWith('image') ? '🖼️' : (media.type || '').startsWith('audio') ? '🔊' : '📎';
+    var label = urls.length > 1 ? (icon + ' ' + (media.type || 'file') + ' #' + (i+1)) : (icon + ' ' + (media.type || 'file'));
+    return '<a href="' + escapeHtml(url) + '" target="_blank" class="media-link">' + label + '</a>';
   }).join(' ');
 }
 
 function topSenders(messages) {
-  const map = {};
-  for (const m of messages) {
-    const name = getSenderName(m);
-    const senderId = m.raw?.senderId || m.sender?.id || '';
-    const body = m.raw?.body || m.message?.text || '';
-    const ts = m.timestamp || 0;
-    const key = name + '::' + senderId;
+  var map = {};
+  for (var i = 0; i < messages.length; i++) {
+    var m = messages[i];
+    var name = m.sender && m.sender.name ? m.sender.name : 'Unknown';
+    var senderId = m.sender && m.sender.id ? m.sender.id : '';
+    var sourceLabel = m.source_label || '';
+    var body = m.message && m.message.text ? m.message.text : '';
+    var ts = m.timestamp || 0;
+    var key = name + '::' + senderId + '::' + sourceLabel;
     if (!map[key]) {
-      map[key] = { count: 0, lastMsg: body, lastTs: ts };
+      map[key] = { count: 0, lastMsg: body, lastTs: ts, sourceLabel: sourceLabel };
     }
     map[key].count += 1;
     if (ts > map[key].lastTs) {
@@ -241,157 +215,71 @@ function topSenders(messages) {
       map[key].lastTs = ts;
     }
   }
-  return Object.entries(map)
-    .sort((a, b) => b[1].count - a[1].count)
-    .slice(0, 5)
-    .map(([key, info]) => {
-      const [name, id] = key.split('::');
-      const number = id.replace(/@.*/, '');
-      return { name: name, senderId: id, number, ...info };
-    });
+  var entries = Object.entries(map);
+  entries.sort(function(a, b) { return b[1].count - a[1].count; });
+  return entries.slice(0, 5).map(function(item) {
+    var key = item[0];
+    var info = item[1];
+    var parts = key.split('::');
+    return { name: parts[0], senderId: parts[1] || '', sourceLabel: parts[2] || '', count: info.count, lastMsg: info.lastMsg };
+  });
 }
 
-// ── Render messages table ──
 function renderMessages(messages, title) {
-  const tbody = document.getElementById('messagesTable');
-  const titleEl = document.getElementById('messagesTitle');
-
+  var tbody = document.getElementById('messagesTable');
+  var titleEl = document.getElementById('messagesTitle');
   titleEl.textContent = title || '📜 Messages';
 
   if (messages.length === 0) {
-    tbody.innerHTML = '<tr><td colspan="5" class="no-data">No messages</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="6" class="no-data">No messages</td></tr>';
     return;
   }
 
-  let html = '';
-  for (const m of messages) {
-    const ts = m.timestamp || (new Date(m.received_at).getTime() / 1000);
-    const senderName = getSenderName(m);
-    const senderNum = (m.raw?.senderId || m.sender?.id || '').replace(/@.*/, '');
-    const chatDisplay = getChatDisplay(m);
-    const text = m.raw?.body || m.message?.text || '';
-    const displayText = text.length > 150 ? text.substring(0, 150) + '…' : text;
+  var html = '';
+  for (var i = 0; i < messages.length; i++) {
+    var m = messages[i];
+    var ts = m.timestamp || m.received_at;
+    var senderName = m.sender && m.sender.name ? m.sender.name : 'Unknown';
+    var senderNum = (m.sender && m.sender.id ? m.sender.id : '').replace(/@.*/, '');
+    var sourceLabel = m.source_label || '';
+    var sourceNumber = m.source_number || '';
+    var chatDisplay = getChatDisplay(m);
+    var text = m.message && m.message.text ? m.message.text : '';
+    var displayText = text.length > 150 ? text.substring(0, 150) + '…' : text;
 
     html += '<tr>' +
       '<td style="white-space:nowrap;font-size:12px">' + fmtDateShort(ts) + '</td>' +
       '<td><span class="sender-name">' + escapeHtml(senderName) + '</span>' +
       (senderNum ? '<br><span style="font-size:11px;color:#504060">' + senderNum + '</span>' : '') + '</td>' +
+      '<td><span class="phone-tag">' + escapeHtml(sourceLabel) + '</span><br><span style="font-size:11px;color:#504060">' + escapeHtml(sourceNumber) + '</span></td>' +
       '<td><span class="chat-name">' + escapeHtml(chatDisplay) + '</span></td>' +
       '<td class="msg-text">' + escapeHtml(displayText) + '</td>' +
-      '<td class="media-indicator">' + buildMediaLinks(m) + '</td>' +
+      '<td class="media-indicator">' + getMediaLinks(m) + '</td>' +
       '</tr>';
   }
   tbody.innerHTML = html;
 }
 
-// ── Apply sender filter ──
-let currentFilter = null;
+// ── Main render ──
+var allData = null;
+var currentFilter = null;
 
-function applyFilter() {
-  const hash = location.hash.slice(1);
-  const container = document.getElementById('summaryCardsContainer');
-  const backLink = document.getElementById('filterBackLink');
+function render(data) {
+  allData = data;
+  var messages = data.messages || [];
+  var phones = data.phones || [];
+  var contacts = data.contacts || [];
+  var tasks = data.tasks || [];
+  var total = messages.length;
 
-  if (!hash) {
-    currentFilter = null;
-    if (backLink) backLink.style.display = 'none';
-    container.style.display = 'block';
-    renderMainView();
-    return;
-  }
+  // Subtitle with phone info
+  var phoneInfo = phones.map(function(p) { return p.label + ' (' + p.number + ')'; }).join(', ');
+  document.getElementById('subtitle').textContent = 'Incoming messages — ' + phoneInfo;
 
-  // Parse hash: #senderName::senderId::periodId
-  const parts = hash.split('::');
-  if (parts.length < 2) {
-    container.style.display = 'block';
-    renderMainView();
-    return;
-  }
-
-  const filterName = decodeURIComponent(parts[0]);
-  const filterId = parts[1];
-  const periodId = parts[2] || '';
-
-  // Determine period cutoff
-  let cutoff = null;
-  let periodLabel = '';
-  for (const p of PERIODS) {
-    if (p.id === periodId) { cutoff = p.cutoff; periodLabel = p.label; break; }
-  }
-
-  // Filter messages
-  const filtered = MESSAGES_DATA.filter(m => {
-    const name = m.raw?.senderName || m.sender?.name || 'Unknown';
-    const id = m.raw?.senderId || m.sender?.id || '';
-    if (name !== filterName && id !== filterId) return false;
-    if (cutoff && new Date(m.timestamp * 1000) < cutoff) return false;
-    return true;
-  });
-
-  currentFilter = { name: filterName, count: filtered.length, period: periodLabel };
-
-  container.style.display = 'none';
-
-  // Show filtered view
-  const app = document.getElementById('app');
-  let existing = document.getElementById('filteredView');
-  if (!existing) {
-    existing = document.createElement('div');
-    existing.id = 'filteredView';
-    app.appendChild(existing);
-  }
-
-  let backHtml = '<a class="back-link" onclick="clearFilter()">← Back to overview</a>';
-  let title = 'Messages from ' + escapeHtml(filterName);
-  if (periodLabel) title += ' (' + periodLabel + ')';
-  title += ' — ' + filtered.length + ' messages';
-
-  existing.innerHTML = backHtml +
-    '<h2 class="section-title">' + title + '</h2>' +
-    '<div class="table-wrap"><table><thead><tr>' +
-    '<th>Time</th><th>Sender</th><th>Chat</th><th>Message</th><th>Media</th>' +
-    '</tr></thead><tbody id="filteredTable"></tbody></table></div>';
-
-  const fbody = document.getElementById('filteredTable');
-  if (filtered.length === 0) {
-    fbody.innerHTML = '<tr><td colspan="5" class="no-data">No messages</td></tr>';
-  } else {
-    let html = '';
-    // Show chronologically (oldest first)
-    const sorted = filtered.slice().sort((a, b) => (a.timestamp || 0) - (b.timestamp || 0));
-    for (const m of sorted) {
-      const ts = m.timestamp || 0;
-      const senderName = getSenderName(m);
-      const senderNum = (m.raw?.senderId || m.sender?.id || '').replace(/@.*/, '');
-      const chatDisplay = getChatDisplay(m);
-      const text = m.raw?.body || m.message?.text || '';
-      const displayText = text.length > 150 ? text.substring(0, 150) + '…' : text;
-      html += '<tr>' +
-        '<td style="white-space:nowrap;font-size:12px">' + fmtDateShort(ts) + '</td>' +
-        '<td><span class="sender-name">' + escapeHtml(senderName) + '</span>' +
-        (senderNum ? '<br><span style="font-size:11px;color:#504060">' + senderNum + '</span>' : '') + '</td>' +
-        '<td><span class="chat-name">' + escapeHtml(chatDisplay) + '</span></td>' +
-        '<td class="msg-text">' + escapeHtml(displayText) + '</td>' +
-        '<td class="media-indicator">' + buildMediaLinks(m) + '</td>' +
-        '</tr>';
-    }
-    fbody.innerHTML = html;
-  }
-}
-
-function clearFilter() {
-  location.hash = '';
-}
-
-window.addEventListener('hashchange', applyFilter);
-
-// ── Main view ──
-function renderMainView() {
-  const messages = MESSAGES_DATA;
-  const total = messages.length;
-  const withMedia = messages.filter(hasMedia).length;
-  const uniqueSenders = new Set(messages.map(m => m.raw?.senderName || m.sender?.name || 'Unknown')).size;
-  const uniqueChats = new Set(messages.map(m => m.chat?.id || m.raw?.chatId)).size;
+  // Summary cards
+  var withMedia = messages.filter(function(m) { return m.media && m.media.has_media; }).length;
+  var uniqueSenders = new Set(messages.map(function(m) { return m.sender && m.sender.name ? m.sender.name : 'Unknown'; })).size;
+  var uniqueChats = new Set(messages.map(function(m) { return m.chat ? (m.chat.name || m.chat.id) : ''; })).size;
 
   document.getElementById('summaryCards').innerHTML =
     '<div class="card"><div class="label">Total Messages</div><div class="value green">' + total + '</div></div>' +
@@ -400,23 +288,33 @@ function renderMainView() {
     '<div class="card"><div class="label">Chats</div><div class="value magenta">' + uniqueChats + '</div></div>';
 
   // Period breakdown
-  let periodsHtml = '';
-  for (const p of PERIODS) {
-    const filtered = messages.filter(m => new Date(m.timestamp * 1000) >= p.cutoff);
-    const senders = topSenders(filtered);
-    let listHtml = '';
+  var now = new Date();
+  var periods = [
+    { label: 'Past 7 Days', cutoff: new Date(now.getTime() - 7 * 86400000), id: '7d' },
+    { label: 'Past 4 Weeks', cutoff: new Date(now.getTime() - 28 * 86400000), id: '4w' },
+    { label: 'Past 6 Months', cutoff: new Date(now.getTime() - 180 * 86400000), id: '6m' },
+  ];
+
+  var periodsHtml = '';
+  for (var pi = 0; pi < periods.length; pi++) {
+    var p = periods[pi];
+    var ts = typeof messages[0] && messages[0].timestamp;
+    var filtered = messages.filter(function(m) { return new Date((typeof m.timestamp === 'number' ? m.timestamp * 1000 : m.timestamp)) >= p.cutoff; });
+    var senders = topSenders(filtered);
+    var listHtml = '';
     if (senders.length === 0) {
       listHtml = '<li class="no-data">No messages</li>';
     } else {
-      for (const s of senders) {
-        const encodedName = encodeURIComponent(s.name);
-        const hash = '#' + encodedName + '::' + s.senderId + '::' + p.id;
+      for (var si = 0; si < senders.length; si++) {
+        var s = senders[si];
+        var encodedName = encodeURIComponent(s.name);
+        var hash = '#' + encodedName + '::' + s.senderId + '::' + p.id;
         listHtml += '<li onclick="location.hash=\'' + hash + '\'"><div style="display:flex;flex-direction:column;gap:2px;width:100%">' +
           '<div style="display:flex;justify-content:space-between;align-items:center">' +
           '<span class="name">' + escapeHtml(s.name) + '</span>' +
           '<span class="count-badge">' + s.count + '</span></div>' +
           '<div style="display:flex;justify-content:space-between;font-size:11px;color:#605070">' +
-          '<span>' + (s.number ? '📱 ' + s.number : '') + '</span>' +
+          '<span>' + (s.sourceLabel ? '📱 ' + escapeHtml(s.sourceLabel) : '') + '</span>' +
           '<span style="max-width:180px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">' +
           escapeHtml((s.lastMsg || '').substring(0, 40)) + '</span></div></div></li>';
       }
@@ -429,20 +327,56 @@ function renderMainView() {
   }
   document.getElementById('periodsContainer').innerHTML = periodsHtml;
 
-  // Last 30 messages
-  const last30 = messages.slice(-30).reverse();
-  renderMessages(last30, '📜 Last 30 Messages');
+  // All messages (sorted newest first, max 50)
+  var sorted = messages.slice().sort(function(a, b) {
+    var ta = typeof a.timestamp === 'number' ? a.timestamp : new Date(a.timestamp).getTime() / 1000;
+    var tb = typeof b.timestamp === 'number' ? b.timestamp : new Date(b.timestamp).getTime() / 1000;
+    return tb - ta;
+  });
+  var recent = sorted.slice(0, 50);
+  renderMessages(recent, '📜 Last 50 Messages');
 
-  document.getElementById('updatedAt').textContent = 'Last updated: 2026-07-01 12:53 UTC · ' + total + ' messages captured';
+  document.getElementById('updatedAt').textContent = 'Last updated: ' + (data.updated_at || 'unknown') + ' · ' + total + ' messages captured';
 }
 
-// ── Init ──
-// Check if there's a hash filter on load
-if (location.hash) {
-  applyFilter();
-} else {
-  renderMainView();
+// ── Filter ──
+function applyFilter() {
+  var hash = location.hash.slice(1);
+  if (!hash || !allData) {
+    document.getElementById('summaryCardsContainer').style.display = 'block';
+    var fv = document.getElementById('filteredView');
+    if (fv) fv.style.display = 'none';
+    return;
+  }
+  // Re-render main view into filtered view
+  clearFilter();
+  location.hash = hash;
 }
+
+function clearFilter() {
+  location.hash = '';
+}
+
+// ── Load ──
+async function loadData() {
+  try {
+    var resp = await fetch(DATA_URL);
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    var data = await resp.json();
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+    render(data);
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display = 'block';
+    document.getElementById('error').innerHTML =
+      '<div style="font-size:40px;margin-bottom:12px">⚠️</div>' +
+      '<p>Could not load WhatsApp data.</p><p style="font-size:12px;margin-top:8px">' + e.message + '</p>' +
+      '<p style="margin-top:20px"><a href="javascript:location.reload()" style="color:#25D366">Retry</a></p>';
+  }
+}
+
+loadData();
 </script>
 </body>
 </html>
