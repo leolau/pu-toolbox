@@ -172,37 +172,29 @@
 <script>
 // ── Determine if we're in edit mode ──
 const IS_LOCAL = location.hostname === 'localhost' || location.hostname === '127.0.0.1';
-const CONFIG_URL = 'https://raw.githubusercontent.com/leolau/pu-toolbox/main/whatsapp-config.json';
 const SAVE_URL = 'http://localhost:8766/save_config';
+
+// ── Embedded config data (fallback) ──
+const EMBEDDED_CONFIG = {"phones":[{"id":"phone1","number":"+852****2892","label":"Phone 1","bridge_port":3000,"session_dir":"/opt/data/platforms/whatsapp/session-phone1","enabled":true},{"id":"phone2","number":"+852****0978","label":"Phone 2","bridge_port":3001,"session_dir":"/opt/data/platforms/whatsapp/session-phone2","enabled":true}],"batching":{"window_seconds":5},"triage":{"model":"deepseek-chat","provider":"deepseek","skills_dir":"/opt/data/skills/whatsapp-triage/","custom_skills_dir":"/opt/data/skills/whatsapp-triage/custom/","use_hermes_memory":true},"digest":{"frequency_minutes":60,"channel":"telegram"},"escalation":{"push_to_telegram":true,"criteria":{"family_contacts":[{"name":"Heidi Lui","relation":"Wife","phone":"+852****6060"},{"name":"Mokan Lau","relation":"Elder Son","phone":"+852****5796"},{"name":"Mowan Lau","relation":"Younger Son","phone":"+852****8528"},{"name":"Anna Hau","relation":"Mother","phone":"+141****9963"},{"name":"Andrew Lau","relation":"Brother","phone":"+852****6600"},{"name":"Jay Lau","relation":"Sister-in-law","phone":"+852****8510"}],"rules":["Any message from family_contacts -> escalate immediately","Business requests needing immediate attention -> escalate","Sales opportunities needing immediate attention -> escalate"]}},"mcp_server":{"port":8650,"transport":"sse"}};
 
 let configData = null;
 let hasChanges = false;
 
 function escapeHtml(t) { var d = document.createElement('div'); d.textContent = t || ''; return d.innerHTML; }
 
-async function loadConfig() {
-  try {
-    var resp = await fetch(CONFIG_URL);
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
-    configData = await resp.json();
+function loadConfig() {
+  configData = JSON.parse(JSON.stringify(EMBEDDED_CONFIG));
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('content').style.display = 'block';
 
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('content').style.display = 'block';
-
-    if (!IS_LOCAL) {
-      document.getElementById('readonlyNote').style.display = 'block';
-      document.getElementById('addContactBtn').style.display = 'none';
-      document.getElementById('saveBtn').style.display = 'none';
-    }
-
-    render();
-  } catch(e) {
-    document.getElementById('loading').style.display = 'none';
-    document.getElementById('error').style.display = 'block';
-    document.getElementById('error').innerHTML =
-      '<div style="font-size:40px;margin-bottom:12px">⚠️</div>' +
-      '<p>Could not load config.</p><p style="font-size:12px;margin-top:8px">' + e.message + '</p>';
+  if (!IS_LOCAL) {
+    document.getElementById('readonlyNote').style.display = 'block';
+    document.getElementById('addContactBtn').style.display = 'none';
+    document.getElementById('saveBtn').style.display = 'none';
+    document.getElementById('restartBtn').style.display = 'none';
   }
+
+  render();
 }
 
 function render() {
