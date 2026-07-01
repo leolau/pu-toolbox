@@ -168,6 +168,7 @@
   </div>
 
   <div id="content" style="display:none">
+    <span id="pageLoadedAt" style="display:none"><script>document.write(Date.now())</script></span>
     <div class="cards" id="summaryCards"></div>
     <div class="chart-row">
       <div class="chart-box">
@@ -275,6 +276,17 @@ async function loadData() {
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     var data = await resp.json();
     window._lastData = data;
+    
+    // Auto-refresh if this page was loaded before data was updated
+    var pageLoadedAt = document.getElementById('pageLoadedAt');
+    var loadTime = pageLoadedAt ? parseInt(pageLoadedAt.textContent) : 0;
+    var dataTime = new Date(data.updated_at + ' UTC').getTime();
+    // If page was loaded more than 60s before data was updated, refresh
+    if (dataTime > 0 && loadTime > 0 && (dataTime - loadTime) > 60000) {
+      console.log('Stale page detected, refreshing...');
+      location.reload(true);
+      return;
+    }
     document.getElementById('loading').style.display = 'none';
     document.getElementById('content').style.display = 'block';
     render(data);
