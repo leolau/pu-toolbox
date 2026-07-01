@@ -272,7 +272,7 @@ function fmtCostShort(usd, ccy) {
 async function loadData() {
   try {
     var cacheBuster = '?_=' + Date.now();
-    var resp = await fetch("https://leolau.github.io/pu-toolbox/data.json" + cacheBuster);
+    var resp = await fetch("https://raw.githubusercontent.com/leolau/pu-toolbox/main/data.json" + cacheBuster);
     if (!resp.ok) throw new Error('HTTP ' + resp.status);
     var data = await resp.json();
     window._lastData = data;
