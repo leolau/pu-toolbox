@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-01 15:01 UTC",
+  "updated_at": "2026-07-02 02:02 UTC",
   "phones": [
     {
       "id": "phone1",
@@ -220,71 +220,3977 @@
         ],
         "timestamp": 1782917131
       }
+    },
+    {
+      "id": "16e3e5f6-db32-4d9f-bea3-0e541b7335ee",
+      "timestamp": 1782919737,
+      "received_at": "2026-07-01T15:28:59.112909+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Sugar Chan",
+        "id": "42936905556057@lid"
+      },
+      "chat": {
+        "id": "status@broadcast",
+        "name": "Sugar Chan",
+        "is_group": false
+      },
+      "message": {
+        "text": "[video received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "video",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2A3F1F7F5DC201BEBF8D",
+        "chatId": "status@broadcast",
+        "senderId": "42936905556057@lid",
+        "senderName": "Sugar Chan",
+        "chatName": "Sugar Chan",
+        "isGroup": false,
+        "body": "[video received]",
+        "hasMedia": true,
+        "mediaType": "video",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782919737
+      }
+    },
+    {
+      "id": "22766811-df36-4af5-a033-5e884906f906",
+      "timestamp": 1782919739,
+      "received_at": "2026-07-01T15:29:00.290746+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Sugar Chan",
+        "id": "42936905556057@lid"
+      },
+      "chat": {
+        "id": "status@broadcast",
+        "name": "Sugar Chan",
+        "is_group": false
+      },
+      "message": {
+        "text": "[video received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "video",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2A9C3EB78F9A9F43832F",
+        "chatId": "status@broadcast",
+        "senderId": "42936905556057@lid",
+        "senderName": "Sugar Chan",
+        "chatName": "Sugar Chan",
+        "isGroup": false,
+        "body": "[video received]",
+        "hasMedia": true,
+        "mediaType": "video",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782919739
+      }
+    },
+    {
+      "id": "33ab35aa-bdab-4374-b526-1f8743a3f8f7",
+      "timestamp": 1782919740,
+      "received_at": "2026-07-01T15:29:01.818682+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Sugar Chan",
+        "id": "42936905556057@lid"
+      },
+      "chat": {
+        "id": "status@broadcast",
+        "name": "Sugar Chan",
+        "is_group": false
+      },
+      "message": {
+        "text": "[video received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "video",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2AECBD14C6B6D10FBDBE",
+        "chatId": "status@broadcast",
+        "senderId": "42936905556057@lid",
+        "senderName": "Sugar Chan",
+        "chatName": "Sugar Chan",
+        "isGroup": false,
+        "body": "[video received]",
+        "hasMedia": true,
+        "mediaType": "video",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782919740
+      }
+    },
+    {
+      "id": "ee65f80c-5117-4404-83bc-af97865ad7db",
+      "timestamp": 1782919741,
+      "received_at": "2026-07-01T15:29:03.036024+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Sugar Chan",
+        "id": "42936905556057@lid"
+      },
+      "chat": {
+        "id": "status@broadcast",
+        "name": "Sugar Chan",
+        "is_group": false
+      },
+      "message": {
+        "text": "[video received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "video",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2AE4A5E3DFD4C47899F5",
+        "chatId": "status@broadcast",
+        "senderId": "42936905556057@lid",
+        "senderName": "Sugar Chan",
+        "chatName": "Sugar Chan",
+        "isGroup": false,
+        "body": "[video received]",
+        "hasMedia": true,
+        "mediaType": "video",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782919741
+      }
+    },
+    {
+      "id": "cf4fe116-7594-498e-9da6-5d725a8f9d0b",
+      "timestamp": 1782940069,
+      "received_at": "2026-07-01T21:07:50.368121+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Richard Au \ud83d\ude0e",
+        "id": "191718901199027@lid"
+      },
+      "chat": {
+        "id": "120363176568690113@g.us",
+        "name": "120363176568690113",
+        "is_group": true
+      },
+      "message": {
+        "text": "[document received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "document",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC9423A6A1CF009B1DFC5ADE31E16BD1",
+        "chatId": "120363176568690113@g.us",
+        "senderId": "191718901199027@lid",
+        "senderName": "Richard Au \ud83d\ude0e",
+        "chatName": "120363176568690113",
+        "isGroup": true,
+        "body": "[document received]",
+        "hasMedia": true,
+        "mediaType": "document",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782940069
+      }
+    },
+    {
+      "id": "5a90794d-11fb-47a2-8618-2f0f4b34d615",
+      "timestamp": 1782940070,
+      "received_at": "2026-07-01T21:07:50.888084+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Richard Au \ud83d\ude0e",
+        "id": "191718901199027@lid"
+      },
+      "chat": {
+        "id": "120363176568690113@g.us",
+        "name": "120363176568690113",
+        "is_group": true
+      },
+      "message": {
+        "text": "[document received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "document",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC207E20B3DEA7C7771E2EEC81600F27",
+        "chatId": "120363176568690113@g.us",
+        "senderId": "191718901199027@lid",
+        "senderName": "Richard Au \ud83d\ude0e",
+        "chatName": "120363176568690113",
+        "isGroup": true,
+        "body": "[document received]",
+        "hasMedia": true,
+        "mediaType": "document",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782940070
+      }
+    },
+    {
+      "id": "011543bc-ebae-4034-a894-9d3d4cbb3064",
+      "timestamp": 1782940070,
+      "received_at": "2026-07-01T21:07:51.278534+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Richard Au \ud83d\ude0e",
+        "id": "191718901199027@lid"
+      },
+      "chat": {
+        "id": "120363176568690113@g.us",
+        "name": "120363176568690113",
+        "is_group": true
+      },
+      "message": {
+        "text": "[document received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "document",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC01BA3AF5368020FBDA2C092E532BBF",
+        "chatId": "120363176568690113@g.us",
+        "senderId": "191718901199027@lid",
+        "senderName": "Richard Au \ud83d\ude0e",
+        "chatName": "120363176568690113",
+        "isGroup": true,
+        "body": "[document received]",
+        "hasMedia": true,
+        "mediaType": "document",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782940070
+      }
+    },
+    {
+      "id": "84d7ca69-38a0-44ad-9253-443ae9342a9a",
+      "timestamp": 1782940580,
+      "received_at": "2026-07-01T21:16:21.339967+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "MAZ @CM",
+        "id": "9423359615215@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy Birthday @140256603025553 \ud83c\udf82",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC6EBE0E4219C2B23C16FA3F666B2F26",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "9423359615215@lid",
+        "senderName": "MAZ @CM",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy Birthday @140256603025553 \ud83c\udf82",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782940580
+      }
+    },
+    {
+      "id": "e75b211f-d2ef-42c5-84e7-3f7b99b6e62b",
+      "timestamp": 1782940888,
+      "received_at": "2026-07-01T21:21:28.958650+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Richard Au \ud83d\ude0e",
+        "id": "191718901199027@lid"
+      },
+      "chat": {
+        "id": "120363176568690113@g.us",
+        "name": "120363176568690113",
+        "is_group": true
+      },
+      "message": {
+        "text": "https://www.linkedin.com/posts/will-mctighe_i-paid-1500-to-learn-how-to-build-a-personal-share-7477901260927479808-Gpd8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFlvPrsBVVEFBmLktNjA0nAEPvs6pUmTh5o\nWhen most people start posting, they focus on the complete wrong thing.\nThey tweak the headline, switch niches, try a new format every week, write like they\u2019re sending a formal memo and wonder why nothing sticks.\nDoing it right comes down to 19 laws:",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3EB02316ED9962E4FC1B1C",
+        "chatId": "120363176568690113@g.us",
+        "senderId": "191718901199027@lid",
+        "senderName": "Richard Au \ud83d\ude0e",
+        "chatName": "120363176568690113",
+        "isGroup": true,
+        "body": "https://www.linkedin.com/posts/will-mctighe_i-paid-1500-to-learn-how-to-build-a-personal-share-7477901260927479808-Gpd8/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFlvPrsBVVEFBmLktNjA0nAEPvs6pUmTh5o\nWhen most people start posting, they focus on the complete wrong thing.\nThey tweak the headline, switch niches, try a new format every week, write like they\u2019re sending a formal memo and wonder why nothing sticks.\nDoing it right comes down to 19 laws:",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782940888
+      }
+    },
+    {
+      "id": "3f89e327-9260-4c72-b7de-5651e8463e95",
+      "timestamp": 1782944718,
+      "received_at": "2026-07-01T22:25:18.837158+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Yan Lam MA",
+        "id": "27328994402305@lid"
+      },
+      "chat": {
+        "id": "120363110875633395@g.us",
+        "name": "120363110875633395",
+        "is_group": true
+      },
+      "message": {
+        "text": "rejected",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC0D2EBC409A4008C57F4663E7D5BBCF",
+        "chatId": "120363110875633395@g.us",
+        "senderId": "27328994402305@lid",
+        "senderName": "Yan Lam MA",
+        "chatName": "120363110875633395",
+        "isGroup": true,
+        "body": "rejected",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782944718
+      }
+    },
+    {
+      "id": "3d732dc1-d188-403a-9b21-e7e60edf401d",
+      "timestamp": 1782944738,
+      "received_at": "2026-07-01T22:25:38.282747+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Yan Lam MA",
+        "id": "27328994402305@lid"
+      },
+      "chat": {
+        "id": "120363110875633395@g.us",
+        "name": "120363110875633395",
+        "is_group": true
+      },
+      "message": {
+        "text": "Apple login failed",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "ACCAEBAC101C2364C26027D5CFE1B511",
+        "chatId": "120363110875633395@g.us",
+        "senderId": "27328994402305@lid",
+        "senderName": "Yan Lam MA",
+        "chatName": "120363110875633395",
+        "isGroup": true,
+        "body": "Apple login failed",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782944738
+      }
+    },
+    {
+      "id": "6b4116f2-b36d-4d56-9b4d-949994cc5731",
+      "timestamp": 1782946182,
+      "received_at": "2026-07-01T22:49:42.974445+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": ".",
+        "id": "171639945859163@lid"
+      },
+      "chat": {
+        "id": "171639945859163@lid",
+        "name": ".",
+        "is_group": false
+      },
+      "message": {
+        "text": "?",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3AC388457B1341D8D9DE",
+        "chatId": "171639945859163@lid",
+        "senderId": "171639945859163@lid",
+        "senderName": ".",
+        "chatName": ".",
+        "isGroup": false,
+        "body": "?",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782946182
+      }
+    },
+    {
+      "id": "f57fd1fd-2412-4d78-b2d8-3a596a4c9102",
+      "timestamp": 1782946222,
+      "received_at": "2026-07-01T22:50:22.851454+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": ".",
+        "id": "171639945859163@lid"
+      },
+      "chat": {
+        "id": "171639945859163@lid",
+        "name": ".",
+        "is_group": false
+      },
+      "message": {
+        "text": "no worries",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A553B2F7BAE5D2463F4",
+        "chatId": "171639945859163@lid",
+        "senderId": "171639945859163@lid",
+        "senderName": ".",
+        "chatName": ".",
+        "isGroup": false,
+        "body": "no worries",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782946222
+      }
+    },
+    {
+      "id": "ffefaf05-7cb4-40c8-b24f-3013fe38571b",
+      "timestamp": 1782948050,
+      "received_at": "2026-07-01T23:20:51.561177+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "F",
+        "id": "131679452704861@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy birthday",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A4FFAC0FB7C4CFC5E94",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "131679452704861@lid",
+        "senderName": "F",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy birthday",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782948050
+      }
+    },
+    {
+      "id": "e7c599c3-2408-4363-af6e-6bf368102307",
+      "timestamp": 1782948215,
+      "received_at": "2026-07-01T23:23:36.163546+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Anna Lau",
+        "id": "158750614769838@lid"
+      },
+      "chat": {
+        "id": "158750614769838@lid",
+        "name": "Anna Lau",
+        "is_group": false
+      },
+      "message": {
+        "text": "\u6587 \u6211\u651e\u5497\u886b\u8fd4\u5c4b\u4f01\u5566\uff0c\u800c\u5bb6\u98df\u665a\u9910\ud83d\ude0b",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A77672E1E5DF38D50ED",
+        "chatId": "158750614769838@lid",
+        "senderId": "158750614769838@lid",
+        "senderName": "Anna Lau",
+        "chatName": "Anna Lau",
+        "isGroup": false,
+        "body": "\u6587 \u6211\u651e\u5497\u886b\u8fd4\u5c4b\u4f01\u5566\uff0c\u800c\u5bb6\u98df\u665a\u9910\ud83d\ude0b",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782948215
+      }
+    },
+    {
+      "id": "d51b9da0-c8e5-47fc-80ee-162f0d355b18",
+      "timestamp": 1782951254,
+      "received_at": "2026-07-02T00:14:15.162719+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Vincy",
+        "id": "116260570452035@lid"
+      },
+      "chat": {
+        "id": "status@broadcast",
+        "name": "Vincy",
+        "is_group": false
+      },
+      "message": {
+        "text": "[image received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "4A1E7C1CEE54F1AA43E0",
+        "chatId": "status@broadcast",
+        "senderId": "116260570452035@lid",
+        "senderName": "Vincy",
+        "chatName": "Vincy",
+        "isGroup": false,
+        "body": "[image received]",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782951254
+      }
+    },
+    {
+      "id": "17d4414b-00ac-4f5b-a36a-e25981f1f1b3",
+      "timestamp": 1782952750,
+      "received_at": "2026-07-02T00:39:11.106127+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Carol",
+        "id": "106334817132662@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "[image received]",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3EB013711FDF625899F320",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "106334817132662@lid",
+        "senderName": "Carol",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "[image received]",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "106334817132662@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782952750
+      }
+    },
+    {
+      "id": "4660d196-82de-4550-97d2-4014d0226347",
+      "timestamp": 1782952751,
+      "received_at": "2026-07-02T00:39:12.039998+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Carol",
+        "id": "106334817132662@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "\ud83e\udd29 Good Day Fellow Effectuators \ud83e\udd29\n\n*Kindly introduce:*\n\ud83d\udccc Name: *Carol Ching* \n\ud83d\udcccPosition: *Solution Consultant*\n\ud83d\udcccCompany: *Horizon Institution Sdn Bhd*\n\ud83d\udccc Nature of Business: *Provide Safety Consultancy and Safety training to client. Our vision is to preserve, empower and improve health, safety and environmental standards in every workplace we serve.*\n\ud83d\udcccLocation: Klang \n\ud83d\udccc Who you would like to connect with / explore collaboration:\nI would like to connect with business owners, HR professionals, safety practitioners, and management teams who are looking for practical solutions to improve workplace safety, employee competency, regulatory compliance, and overall organizational performance.\n\nI am also open to collaborating with training providers, consultants, industry experts, and organizations that are interested in developing customized training programmes, safety consultancy services, and HRD Corp-claimable learning solutions. My goal is to understand each organization\u2019s challenges and provide suitable, practical, and results-driven solutions rather than offering a one-size-fits-all programme.\n\n\ud83d\udccc Contact Me at: 016-5487 144 (Carol)",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3EB0C19D4299384800EDB9",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "106334817132662@lid",
+        "senderName": "Carol",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "\ud83e\udd29 Good Day Fellow Effectuators \ud83e\udd29\n\n*Kindly introduce:*\n\ud83d\udccc Name: *Carol Ching* \n\ud83d\udcccPosition: *Solution Consultant*\n\ud83d\udcccCompany: *Horizon Institution Sdn Bhd*\n\ud83d\udccc Nature of Business: *Provide Safety Consultancy and Safety training to client. Our vision is to preserve, empower and improve health, safety and environmental standards in every workplace we serve.*\n\ud83d\udcccLocation: Klang \n\ud83d\udccc Who you would like to connect with / explore collaboration:\nI would like to connect with business owners, HR professionals, safety practitioners, and management teams who are looking for practical solutions to improve workplace safety, employee competency, regulatory compliance, and overall organizational performance.\n\nI am also open to collaborating with training providers, consultants, industry experts, and organizations that are interested in developing customized training programmes, safety consultancy services, and HRD Corp-claimable learning solutions. My goal is to understand each organization\u2019s challenges and provide suitable, practical, and results-driven solutions rather than offering a one-size-fits-all programme.\n\n\ud83d\udccc Contact Me at: 016-5487 144 (Carol)",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782952751
+      }
+    },
+    {
+      "id": "505f1f64-c81f-4460-b44b-7aa05b04596d",
+      "timestamp": 1782952791,
+      "received_at": "2026-07-02T00:39:52.249229+00:00",
+      "source_phone": "phone2",
+      "source_label": "Phone 2",
+      "source_number": "+85296660978",
+      "sender": {
+        "name": "Allen_lei",
+        "id": "198625175048195@lid"
+      },
+      "chat": {
+        "id": "120363396404018330@g.us",
+        "name": "120363396404018330",
+        "is_group": true
+      },
+      "message": {
+        "text": "\u65e9\u6668\uff01 \u4eca\u65e51030\ud83d\ude4f\ud83c\udffc \u5728\u5b78\u6821\u9580\u53e3\u7b49\u4e00\u7b49\u6211\u63a5\u5f85",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A1E707CC3A9D2F3C963",
+        "chatId": "120363396404018330@g.us",
+        "senderId": "198625175048195@lid",
+        "senderName": "Allen_lei",
+        "chatName": "120363396404018330",
+        "isGroup": true,
+        "body": "\u65e9\u6668\uff01 \u4eca\u65e51030\ud83d\ude4f\ud83c\udffc \u5728\u5b78\u6821\u9580\u53e3\u7b49\u4e00\u7b49\u6211\u63a5\u5f85",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85296660978@14@s.whatsapp.net",
+          "193969849946128@14@lid"
+        ],
+        "timestamp": 1782952791
+      }
+    },
+    {
+      "id": "06e5e5a9-604d-402e-a758-a0933f838e7c",
+      "timestamp": 1782952797,
+      "received_at": "2026-07-02T00:39:57.228951+00:00",
+      "source_phone": "phone2",
+      "source_label": "Phone 2",
+      "source_number": "+85296660978",
+      "sender": {
+        "name": "Allen_lei",
+        "id": "198625175048195@lid"
+      },
+      "chat": {
+        "id": "120363396404018330@g.us",
+        "name": "120363396404018330",
+        "is_group": true
+      },
+      "message": {
+        "text": "Okay !",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3AD1C01B6D2AC40CFFC6",
+        "chatId": "120363396404018330@g.us",
+        "senderId": "198625175048195@lid",
+        "senderName": "Allen_lei",
+        "chatName": "120363396404018330",
+        "isGroup": true,
+        "body": "Okay !",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": "2A5479D2B1C75068ED09",
+        "quotedParticipant": "193969849946128@lid",
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": true,
+        "botIds": [
+          "85296660978@14@s.whatsapp.net",
+          "193969849946128@14@lid"
+        ],
+        "timestamp": 1782952797
+      }
+    },
+    {
+      "id": "2f5483da-ebfb-4cce-8c5a-f0f644691cb9",
+      "timestamp": 1782952815,
+      "received_at": "2026-07-02T00:40:15.516351+00:00",
+      "source_phone": "phone2",
+      "source_label": "Phone 2",
+      "source_number": "+85296660978",
+      "sender": {
+        "name": "Allen_lei",
+        "id": "198625175048195@lid"
+      },
+      "chat": {
+        "id": "120363396404018330@g.us",
+        "name": "120363396404018330",
+        "is_group": true
+      },
+      "message": {
+        "text": "\u5df2\u4e0b\u8f09\u7a0b\u5f0f",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A12D978E69E81B559F3",
+        "chatId": "120363396404018330@g.us",
+        "senderId": "198625175048195@lid",
+        "senderName": "Allen_lei",
+        "chatName": "120363396404018330",
+        "isGroup": true,
+        "body": "\u5df2\u4e0b\u8f09\u7a0b\u5f0f",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85296660978@14@s.whatsapp.net",
+          "193969849946128@14@lid"
+        ],
+        "timestamp": 1782952815
+      }
+    },
+    {
+      "id": "bb9c5e15-a4df-42ba-97ab-27fed980e4b6",
+      "timestamp": 1782952928,
+      "received_at": "2026-07-02T00:42:09.287029+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Carol",
+        "id": "106334817132662@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "\ud83e\udd29 Good Day Fellow Effectuators \ud83e\udd29\n\n*Kindly introduce:*\n\ud83d\udccc Name: *Carol Ching* \n\ud83d\udcccPosition: *Solution Consultant*\n\ud83d\udcccCompany: *Horizon Institution Sdn Bhd*\n\ud83d\udccc Nature of Business: *Provide Safety Consultancy and Safety training to client. Our vision is to preserve, empower and improve health, safety and environmental standards in every workplace we serve.*\n\ud83d\udcccLocation: Klang \n\ud83d\udccc Who you would like to connect with / explore collaboration:\nI would like to connect with business owners, HR professionals, safety practitioners, and management teams who are looking for practical solutions to improve workplace safety, employee competency, regulatory compliance, and overall organizational performance.\n\nI am also open to collaborating with training providers, consultants, industry experts, and organizations that are interested in developing customized training programmes, safety consultancy services, and HRD Corp-claimable learning solutions. \n\n\ud83d\udccc Contact me: 015-538 7144 (Carol)",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3EB09463CB65403E7F97F4",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "106334817132662@lid",
+        "senderName": "Carol",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "\ud83e\udd29 Good Day Fellow Effectuators \ud83e\udd29\n\n*Kindly introduce:*\n\ud83d\udccc Name: *Carol Ching* \n\ud83d\udcccPosition: *Solution Consultant*\n\ud83d\udcccCompany: *Horizon Institution Sdn Bhd*\n\ud83d\udccc Nature of Business: *Provide Safety Consultancy and Safety training to client. Our vision is to preserve, empower and improve health, safety and environmental standards in every workplace we serve.*\n\ud83d\udcccLocation: Klang \n\ud83d\udccc Who you would like to connect with / explore collaboration:\nI would like to connect with business owners, HR professionals, safety practitioners, and management teams who are looking for practical solutions to improve workplace safety, employee competency, regulatory compliance, and overall organizational performance.\n\nI am also open to collaborating with training providers, consultants, industry experts, and organizations that are interested in developing customized training programmes, safety consultancy services, and HRD Corp-claimable learning solutions. \n\n\ud83d\udccc Contact me: 015-538 7144 (Carol)",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782952928
+      }
+    },
+    {
+      "id": "91e496ee-9d5a-4aea-a5f7-a46710afb0ca",
+      "timestamp": 1782953229,
+      "received_at": "2026-07-02T00:47:09.751601+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Yan Lam MA",
+        "id": "27328994402305@lid"
+      },
+      "chat": {
+        "id": "120363110875633395@g.us",
+        "name": "120363110875633395",
+        "is_group": true
+      },
+      "message": {
+        "text": "maybe it is provisioning profile problem",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC3435F6E00FF6922FD3D281D61EDA80",
+        "chatId": "120363110875633395@g.us",
+        "senderId": "27328994402305@lid",
+        "senderName": "Yan Lam MA",
+        "chatName": "120363110875633395",
+        "isGroup": true,
+        "body": "maybe it is provisioning profile problem",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782953229
+      }
+    },
+    {
+      "id": "1e4739d8-b648-40a1-ad5a-796348efa8ab",
+      "timestamp": 1782953357,
+      "received_at": "2026-07-02T00:49:17.310991+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Yan Lam MA",
+        "id": "27328994402305@lid"
+      },
+      "chat": {
+        "id": "120363110875633395@g.us",
+        "name": "120363110875633395",
+        "is_group": true
+      },
+      "message": {
+        "text": "I'll check at office",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "ACE334ED07EC4349B3430E832772662D",
+        "chatId": "120363110875633395@g.us",
+        "senderId": "27328994402305@lid",
+        "senderName": "Yan Lam MA",
+        "chatName": "120363110875633395",
+        "isGroup": true,
+        "body": "I'll check at office",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782953357
+      }
+    },
+    {
+      "id": "ed887d15-3970-434d-84d8-244f907487da",
+      "timestamp": 1782953515,
+      "received_at": "2026-07-02T00:51:56.373070+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Marv",
+        "id": "220542426693647@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "@140256603025553 , it wasn\u2019t me. \ud83d\ude02",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2AF1554FEB8D384E72AD",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "220542426693647@lid",
+        "senderName": "Marv",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "@140256603025553 , it wasn\u2019t me. \ud83d\ude02",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782953515
+      }
+    },
+    {
+      "id": "8a192a96-58d5-44fc-915c-b844a69328ba",
+      "timestamp": 1782954024,
+      "received_at": "2026-07-02T01:00:25.189990+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Joshua Chu",
+        "id": "104256120033426@lid"
+      },
+      "chat": {
+        "id": "120363176568690113@g.us",
+        "name": "120363176568690113",
+        "is_group": true
+      },
+      "message": {
+        "text": "Excited to share my featured interview with capital \u8cc7\u672c\u5e73\u53f0. Come check us out!\n\nhttps://www.linkedin.com/posts/joshua-kiu-wah-chu_web3-legalinnovation-leadership-activity-7478243550061592576-bL0e?utm_source=share&utm_medium=member_android&rcm=ACoAACTZZT8Bd1idSFgKPfOdMYzINlwhSetcVX4",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "AC91E22F0B1BA9F9DDBCAA266F5A1415",
+        "chatId": "120363176568690113@g.us",
+        "senderId": "104256120033426@lid",
+        "senderName": "Joshua Chu",
+        "chatName": "120363176568690113",
+        "isGroup": true,
+        "body": "Excited to share my featured interview with capital \u8cc7\u672c\u5e73\u53f0. Come check us out!\n\nhttps://www.linkedin.com/posts/joshua-kiu-wah-chu_web3-legalinnovation-leadership-activity-7478243550061592576-bL0e?utm_source=share&utm_medium=member_android&rcm=ACoAACTZZT8Bd1idSFgKPfOdMYzINlwhSetcVX4",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782954024
+      }
+    },
+    {
+      "id": "7e815b47-293c-42be-b0fc-cd3000fab102",
+      "timestamp": 1782955332,
+      "received_at": "2026-07-02T01:22:12.888179+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Angela",
+        "id": "244753694204032@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Happy birthday @140256603025553",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "A5BBDE6A5F0A948049BD318C9457C56E",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "244753694204032@lid",
+        "senderName": "Angela",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Happy birthday @140256603025553",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [
+          "140256603025553@lid"
+        ],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782955332
+      }
+    },
+    {
+      "id": "270e2b6e-6e39-4061-97c9-8b4d974c857e",
+      "timestamp": 1782955650,
+      "received_at": "2026-07-02T01:27:30.954881+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "\u2600\ufe0fSan",
+        "id": "91255220514894@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Does anyone here know any WPC wall paneling supplier?",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "3A80F96D61D0F59DCAD7",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "91255220514894@lid",
+        "senderName": "\u2600\ufe0fSan",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Does anyone here know any WPC wall paneling supplier?",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782955650
+      }
+    },
+    {
+      "id": "c2b8eebf-5b76-4d3a-8097-078991f8dcd1",
+      "timestamp": 1782956748,
+      "received_at": "2026-07-02T01:45:49.766671+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "id": "102916174159904@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "Blessed Morning My Beloved Trainers Join Our Free NTW Sessions We Start Early",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2AFFDABFAAEE90750758",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "102916174159904@lid",
+        "senderName": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "Blessed Morning My Beloved Trainers Join Our Free NTW Sessions We Start Early",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782956748
+      }
+    },
+    {
+      "id": "28613dc2-8821-4a39-b399-bd0f4a4d9d0b",
+      "timestamp": 1782956750,
+      "received_at": "2026-07-02T01:45:50.767128+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "id": "102916174159904@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "https://www.nationaltrainingweek.gov.my/indiCourse?courseId=29677",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2AB165CCE5074FC2BA71",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "102916174159904@lid",
+        "senderName": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "https://www.nationaltrainingweek.gov.my/indiCourse?courseId=29677",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782956750
+      }
+    },
+    {
+      "id": "1eed876d-2fc0-4681-88a9-49454bed6be7",
+      "timestamp": 1782956750,
+      "received_at": "2026-07-02T01:45:51.517408+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "id": "102916174159904@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "https://www.nationaltrainingweek.gov.my/indiCourse?courseId=30013",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2A237444CEB96A7354E4",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "102916174159904@lid",
+        "senderName": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "https://www.nationaltrainingweek.gov.my/indiCourse?courseId=30013",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782956750
+      }
+    },
+    {
+      "id": "c4af195e-6669-4d2c-987d-807f142a9447",
+      "timestamp": 1782956751,
+      "received_at": "2026-07-02T01:45:52.317177+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "id": "102916174159904@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "https://www.nationaltrainingweek.gov.my/indiCourse?courseId=29857",
+        "type": "text"
+      },
+      "media": {
+        "has_media": true,
+        "type": "image",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2AD25A065C0524572B12",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "102916174159904@lid",
+        "senderName": "Dr Brian Thiaga Wisdom Sanctuary Inc",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "https://www.nationaltrainingweek.gov.my/indiCourse?courseId=29857",
+        "hasMedia": true,
+        "mediaType": "image",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782956751
+      }
+    },
+    {
+      "id": "1a4c7e5c-81e8-4a0a-af3e-6062eeb9f2da",
+      "timestamp": 1782956871,
+      "received_at": "2026-07-02T01:47:52.271275+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "Angela",
+        "id": "244753694204032@lid"
+      },
+      "chat": {
+        "id": "120363026848238012@g.us",
+        "name": "120363026848238012",
+        "is_group": true
+      },
+      "message": {
+        "text": "\u2728 Health & Wellness Business Connect #2\n\n*FINANCIAL WELLNESS*\n_Where Inner Financial Awareness Meets Practical Financial Resilience_\n\n> Money pressure is real.\n\n> Cost of living is rising.\n> AI and technology are changing careers and businesses.\n> Markets are uncertain.\n> Business owners and professionals are making financial decisions under more pressure than before.\n\n- _This session is created for entrepreneurs, business owners, leaders, investors, wellness professionals, and working professionals who want to build a healthier relationship with money while strengthening long term financial resilience._\n\nThis is not a typical finance talk.\n\n_It is a curated business networking experience where money mindset, emotional awareness, wellbeing, leadership, and practical financial strategies come together._\n\n> One afternoon.\n> Fresh perspectives.\n> Powerful conversations.\n> Valuable connections.\n\nIf you are growing a business, leading a team, or planning your financial future, this is a good space to rethink Financial Wellness and connect with the right people.\n\nEvent Details\n- \ud83d\udcc5 *31 July 2026*\n- \u23f0 *1:00 PM to 5:00 PM*\n- \ud83d\udccd *WORQ Intermark*\n\n*Register here:* https://eventsize.com/event/health-wellness-business-connect-2",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "A5C730AFC8879024167A017BBDBCB058",
+        "chatId": "120363026848238012@g.us",
+        "senderId": "244753694204032@lid",
+        "senderName": "Angela",
+        "chatName": "120363026848238012",
+        "isGroup": true,
+        "body": "\u2728 Health & Wellness Business Connect #2\n\n*FINANCIAL WELLNESS*\n_Where Inner Financial Awareness Meets Practical Financial Resilience_\n\n> Money pressure is real.\n\n> Cost of living is rising.\n> AI and technology are changing careers and businesses.\n> Markets are uncertain.\n> Business owners and professionals are making financial decisions under more pressure than before.\n\n- _This session is created for entrepreneurs, business owners, leaders, investors, wellness professionals, and working professionals who want to build a healthier relationship with money while strengthening long term financial resilience._\n\nThis is not a typical finance talk.\n\n_It is a curated business networking experience where money mindset, emotional awareness, wellbeing, leadership, and practical financial strategies come together._\n\n> One afternoon.\n> Fresh perspectives.\n> Powerful conversations.\n> Valuable connections.\n\nIf you are growing a business, leading a team, or planning your financial future, this is a good space to rethink Financial Wellness and connect with the right people.\n\nEvent Details\n- \ud83d\udcc5 *31 July 2026*\n- \u23f0 *1:00 PM to 5:00 PM*\n- \ud83d\udccd *WORQ Intermark*\n\n*Register here:* https://eventsize.com/event/health-wellness-business-connect-2",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782956871
+      }
+    },
+    {
+      "id": "0a401327-b1ea-4a4e-9ef5-e1cbf6cc36d2",
+      "timestamp": 1782957766,
+      "received_at": "2026-07-02T02:02:46.337143+00:00",
+      "source_phone": "phone1",
+      "source_label": "Phone 1",
+      "source_number": "+85251922892",
+      "sender": {
+        "name": "heather",
+        "id": "31671223091322@lid"
+      },
+      "chat": {
+        "id": "120363297337568032@g.us",
+        "name": "120363297337568032",
+        "is_group": true
+      },
+      "message": {
+        "text": "2 Jul 2026, machines without auto turn on: \nZone 1 Board 6, 7, 8\nResearch zone blue panel",
+        "type": "text"
+      },
+      "media": {
+        "has_media": false,
+        "type": "",
+        "path": "",
+        "urls": []
+      },
+      "raw": {
+        "messageId": "2A3272195986CD9781FC",
+        "chatId": "120363297337568032@g.us",
+        "senderId": "31671223091322@lid",
+        "senderName": "heather",
+        "chatName": "120363297337568032",
+        "isGroup": true,
+        "body": "2 Jul 2026, machines without auto turn on: \nZone 1 Board 6, 7, 8\nResearch zone blue panel",
+        "hasMedia": false,
+        "mediaType": "",
+        "mediaUrls": [],
+        "mentionedIds": [],
+        "quotedMessageId": null,
+        "quotedParticipant": null,
+        "quotedRemoteJid": null,
+        "hasQuotedMessage": false,
+        "botIds": [
+          "85251922892@51@s.whatsapp.net",
+          "90993328168991@51@lid"
+        ],
+        "timestamp": 1782957766
+      }
     }
   ],
   "contacts": [
     {
-      "phone": "",
-      "name": null,
+      "id": "1b773245-145b-472a-9ce5-2cbceb126762",
+      "display_name": "Google",
       "is_family": 0,
+      "is_vip": 0,
       "relation": null,
-      "first_seen": "2026-07-01T14:35:55.188795+00:00",
-      "last_seen": "2026-07-01T14:45:32.508458+00:00",
-      "message_count": 4
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:30:41.532858+00:00",
+      "updated_at": "2026-07-01T17:40:14.706724+00:00",
+      "message_count": 13,
+      "phone": "no-reply@accounts.google.com",
+      "handle_name": "Google"
     },
     {
-      "phone": "+85294066060",
-      "name": "Heidi Lui",
+      "id": "c3bf4a0d-0ce8-4952-a751-f309496cac41",
+      "display_name": "PayMe by HSBC",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.558892+00:00",
+      "updated_at": "2026-07-01T23:43:10.733781+00:00",
+      "message_count": 11,
+      "phone": "no-reply-payme@notification.hsbc.com.hk",
+      "handle_name": "PayMe by HSBC"
+    },
+    {
+      "id": "2e1c1a1d-0988-4ec7-943e-8d26d69b0141",
+      "display_name": "",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 8,
+      "phone": "",
+      "handle_name": ""
+    },
+    {
+      "id": "37b2fabd-9291-44f6-8b9c-805821e82b47",
+      "display_name": "Google Calendar",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.701669+00:00",
+      "updated_at": "2026-07-02T01:51:13.712601+00:00",
+      "message_count": 8,
+      "phone": "calendar-notification@google.com",
+      "handle_name": "Google Calendar"
+    },
+    {
+      "id": "3f950238-d24f-44ad-9688-60ce64c56622",
+      "display_name": "HSBC",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:30:39.769410+00:00",
+      "updated_at": "2026-07-01T23:43:08.545783+00:00",
+      "message_count": 6,
+      "phone": "HSBC_CNP@notification.hsbc.com.hk",
+      "handle_name": "HSBC"
+    },
+    {
+      "id": "23d7561b-c234-416f-a60c-4e9a5f8cea2d",
+      "display_name": "GuruFocus",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.878905+00:00",
+      "updated_at": "2026-07-01T21:53:20.352748+00:00",
+      "message_count": 6,
+      "phone": "gurufocus@gurufocus.com",
+      "handle_name": "GuruFocus"
+    },
+    {
+      "id": "ecd34870-d3f5-44b1-8afd-74cd711723e7",
+      "display_name": "LinkedIn",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 2,
+      "created_at": "2026-07-01T17:30:44.817782+00:00",
+      "updated_at": "2026-07-01T17:40:27.480321+00:00",
+      "message_count": 6,
+      "phone": "messages-noreply@linkedin.com",
+      "handle_name": "LinkedIn"
+    },
+    {
+      "id": "cfa78c56-4135-4954-bc6f-45dfc51b0017",
+      "display_name": "South China Morning Post",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.874568+00:00",
+      "updated_at": "2026-07-01T17:38:03.068246+00:00",
+      "message_count": 6,
+      "phone": "news@e.scmp.com",
+      "handle_name": "South China Morning Post"
+    },
+    {
+      "id": "29515d61-a6d2-4704-87c8-bdedbdc19bb8",
+      "display_name": "Japan Update: Nikkei Asia",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:45.705201+00:00",
+      "updated_at": "2026-07-01T22:05:37.579888+00:00",
+      "message_count": 6,
+      "phone": "nikkeiasia-d-nl@namail.nikkei.com",
+      "handle_name": "Japan Update: Nikkei Asia"
+    },
+    {
+      "id": "cadefc3d-83cd-4c0f-ad11-8160b8aa4c47",
+      "display_name": "Ten Tabs",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.088682+00:00",
+      "updated_at": "2026-07-01T20:25:02.533843+00:00",
+      "message_count": 5,
+      "phone": "firefox@mail.mozilla.org",
+      "handle_name": "Ten Tabs"
+    },
+    {
+      "id": "cbbdfcdf-a1ad-45d2-a7c4-eee148de6c86",
+      "display_name": "'Chelsea with IFTTT' via info-forward",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.919503+00:00",
+      "updated_at": "2026-07-01T17:36:59.409958+00:00",
+      "message_count": 5,
+      "phone": "info-forward@joyaether.com",
+      "handle_name": "'Chelsea with IFTTT' via info-forward"
+    },
+    {
+      "id": "608dfee6-ae73-446e-84b7-356722ccd0c3",
+      "display_name": " Tripo3d.ai ",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.882010+00:00",
+      "updated_at": "2026-07-01T17:36:26.270024+00:00",
+      "message_count": 5,
+      "phone": "news@email.tripo3d.ai",
+      "handle_name": " Tripo3d.ai "
+    },
+    {
+      "id": "a560ad62-f09d-4dac-b780-db17d12e32af",
+      "display_name": "Medium Daily Digest",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.624522+00:00",
+      "updated_at": "2026-07-01T23:51:03.241835+00:00",
+      "message_count": 5,
+      "phone": "noreply@medium.com",
+      "handle_name": "Medium Daily Digest"
+    },
+    {
+      "id": "06cf768a-44e2-4cb5-b5ad-f177fdfb59a7",
+      "display_name": "leolau",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:48.461704+00:00",
+      "updated_at": "2026-07-02T01:12:08.249622+00:00",
+      "message_count": 5,
+      "phone": "notifications@github.com",
+      "handle_name": "leolau"
+    },
+    {
+      "id": "e63039e1-c224-4ae4-8799-32472fbb7f9e",
+      "display_name": "The New York Times",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:48.471279+00:00",
+      "updated_at": "2026-07-01T21:04:11.600049+00:00",
+      "message_count": 5,
+      "phone": "nytdirect@nytimes.com",
+      "handle_name": "The New York Times"
+    },
+    {
+      "id": "c3698711-47bc-4a6b-a552-a179be8f63b9",
+      "display_name": "Hume Health",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:39:58.034106+00:00",
+      "updated_at": "2026-07-01T18:34:17.529633+00:00",
+      "message_count": 5,
+      "phone": "support@myhumehealth.com",
+      "handle_name": "Hume Health"
+    },
+    {
+      "id": "7f3ff703-3cd3-4683-833f-6c263cae1f42",
+      "display_name": "Microsoft AI Cloud Partner Program",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.770440+00:00",
+      "updated_at": "2026-07-01T17:37:15.452747+00:00",
+      "message_count": 4,
+      "phone": "MicrosoftAICloudPartnerProgram@email.microsoft.com",
+      "handle_name": "Microsoft AI Cloud Partner Program"
+    },
+    {
+      "id": "3d176b85-ebcb-4d15-8eb2-18e8b9d349a2",
+      "display_name": "Angel Launch",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.781213+00:00",
+      "updated_at": "2026-07-01T22:33:35.363387+00:00",
+      "message_count": 4,
+      "phone": "Zahava@angellaunch.com",
+      "handle_name": "Angel Launch"
+    },
+    {
+      "id": "9bd98e28-19a9-43ae-8a02-4c5656722594",
+      "display_name": "Cole from Softr",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.725061+00:00",
+      "updated_at": "2026-07-01T17:39:02.426562+00:00",
+      "message_count": 4,
+      "phone": "cole@softr.io",
+      "handle_name": "Cole from Softr"
+    },
+    {
+      "id": "3b257002-5017-4dd2-984a-3a170414779a",
+      "display_name": "3Business Circle",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.762362+00:00",
+      "updated_at": "2026-07-01T17:39:28.273807+00:00",
+      "message_count": 3,
+      "phone": "3BusinessCircle@newsletter.three.com.hk",
+      "handle_name": "3Business Circle"
+    },
+    {
+      "id": "e6595dd3-07df-4f12-bdda-8dbf1fc7e397",
+      "display_name": "Coursera",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.767373+00:00",
+      "updated_at": "2026-07-01T17:37:13.297330+00:00",
+      "message_count": 3,
+      "phone": "Coursera@m.learn.coursera.org",
+      "handle_name": "Coursera"
+    },
+    {
+      "id": "36e74b02-9dcb-4d5b-a360-1bac8db834c6",
+      "display_name": "Must Reads",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.785609+00:00",
+      "updated_at": "2026-07-01T19:57:45.623611+00:00",
+      "message_count": 3,
+      "phone": "account@seekingalpha.com",
+      "handle_name": "Must Reads"
+    },
+    {
+      "id": "1b773245-145b-472a-9ce5-2cbceb126762",
+      "display_name": "Google",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:30:41.532858+00:00",
+      "updated_at": "2026-07-01T17:40:14.706724+00:00",
+      "message_count": 3,
+      "phone": "families-noreply@google.com",
+      "handle_name": "Google"
+    },
+    {
+      "id": "6169f6d4-851a-4387-ab78-062b3ccd652f",
+      "display_name": "Google Alerts",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.107637+00:00",
+      "updated_at": "2026-07-01T21:10:49.227528+00:00",
+      "message_count": 3,
+      "phone": "googlealerts-noreply@google.com",
+      "handle_name": "Google Alerts"
+    },
+    {
+      "id": "99e61482-f096-4f4a-9db1-617f7299d965",
+      "display_name": "Humans at Magica",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.912641+00:00",
+      "updated_at": "2026-07-01T17:38:05.488647+00:00",
+      "message_count": 3,
+      "phone": "humans@mail.galaxy.ai",
+      "handle_name": "Humans at Magica"
+    },
+    {
+      "id": "c360d094-93bd-41fc-bff8-6857a18f821b",
+      "display_name": "Mail Delivery Subsystem",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.790947+00:00",
+      "updated_at": "2026-07-01T17:39:08.788124+00:00",
+      "message_count": 3,
+      "phone": "mailer-daemon@googlemail.com",
+      "handle_name": "Mail Delivery Subsystem"
+    },
+    {
+      "id": "565cadb9-5f95-45e6-b43c-b096c219ac81",
+      "display_name": "The Canadian Chamber of Commerce in Hong Kong",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.803028+00:00",
+      "updated_at": "2026-07-01T17:38:57.476222+00:00",
+      "message_count": 3,
+      "phone": "members1@cancham.org",
+      "handle_name": "The Canadian Chamber of Commerce in Hong Kong"
+    },
+    {
+      "id": "d640dde2-5caa-460c-8c8b-056668407177",
+      "display_name": "Samreen, Tech in Asia",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.899616+00:00",
+      "updated_at": "2026-07-02T00:55:21.580137+00:00",
+      "message_count": 3,
+      "phone": "newsletter@techinasia.com",
+      "handle_name": "Samreen, Tech in Asia"
+    },
+    {
+      "id": "174975b6-d550-4d69-9d4f-dc63e6b09ac9",
+      "display_name": "Nikkei Asia",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:46.765288+00:00",
+      "updated_at": "2026-07-02T01:37:51.029104+00:00",
+      "message_count": 3,
+      "phone": "nikkeiasia_noreturn@namail.nikkei.com",
+      "handle_name": "Nikkei Asia"
+    },
+    {
+      "id": "2acb9bf1-1792-4718-b416-bdd916ba76a9",
+      "display_name": "App Store Connect",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.595105+00:00",
+      "updated_at": "2026-07-01T17:39:13.624625+00:00",
+      "message_count": 3,
+      "phone": "no_reply@email.apple.com",
+      "handle_name": "App Store Connect"
+    },
+    {
+      "id": "83b4b49e-f75b-4f3b-9280-44938e5429ef",
+      "display_name": "KFC",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.633725+00:00",
+      "updated_at": "2026-07-01T17:39:45.969245+00:00",
+      "message_count": 3,
+      "phone": "noreply@promo.kfchk.com",
+      "handle_name": "KFC"
+    },
+    {
+      "id": "bb374e44-6f84-4e0c-8b62-9a649e909d19",
+      "display_name": "MasterClass",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:30.930377+00:00",
+      "updated_at": "2026-07-01T17:40:08.644649+00:00",
+      "message_count": 3,
+      "phone": "support@email.masterclass.com",
+      "handle_name": "MasterClass"
+    },
+    {
+      "id": "f0918a94-3846-4bae-8fe2-f74a5c7d3522",
+      "display_name": "Fong, Canny Yu Ping",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.766323+00:00",
+      "updated_at": "2026-07-01T17:36:08.582250+00:00",
+      "message_count": 2,
+      "phone": "Canny.Fong@lemeridien.com",
+      "handle_name": "Fong, Canny Yu Ping"
+    },
+    {
+      "id": "3f950238-d24f-44ad-9688-60ce64c56622",
+      "display_name": "HSBC",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:30:39.769410+00:00",
+      "updated_at": "2026-07-01T23:43:08.545783+00:00",
+      "message_count": 2,
+      "phone": "payment.notification@hsbc.com.hk",
+      "handle_name": "HSBC"
+    },
+    {
+      "id": "dbd99a27-83a3-419e-b7a6-9ea5d2fa8a85",
+      "display_name": "Serina Chow",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.772171+00:00",
+      "updated_at": "2026-07-01T17:38:10.471602+00:00",
+      "message_count": 2,
+      "phone": "SerinaC@wearehuman8.com",
+      "handle_name": "Serina Chow"
+    },
+    {
+      "id": "3d7c76df-78d3-453a-b2ba-635fdad5996d",
+      "display_name": "Sherman Ip",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.773997+00:00",
+      "updated_at": "2026-07-01T17:35:40.758747+00:00",
+      "message_count": 2,
+      "phone": "Sherman@petriepr.com",
+      "handle_name": "Sherman Ip"
+    },
+    {
+      "id": "053b4a07-ceca-4493-a531-7641b05dd1ad",
+      "display_name": "Standard Chartered",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.775916+00:00",
+      "updated_at": "2026-07-01T17:39:42.689267+00:00",
+      "message_count": 2,
+      "phone": "Straight2Bank@sc.com",
+      "handle_name": "Standard Chartered"
+    },
+    {
+      "id": "eaa2abfb-9fc9-4bc0-8b3a-bc71306d5c5e",
+      "display_name": "Victoria Tam",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.779294+00:00",
+      "updated_at": "2026-07-01T17:38:42.423666+00:00",
+      "message_count": 2,
+      "phone": "Victoria_Tam@gensler.com",
+      "handle_name": "Victoria Tam"
+    },
+    {
+      "id": "b07ea33c-2413-4842-b145-5f64b37143c4",
+      "display_name": "UITP Academy",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.783276+00:00",
+      "updated_at": "2026-07-01T17:38:47.556983+00:00",
+      "message_count": 2,
+      "phone": "academy@uitp.org",
+      "handle_name": "UITP Academy"
+    },
+    {
+      "id": "327d5f6d-b5fd-46a2-9d65-7ece023cfb79",
+      "display_name": "DBS Bank",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.788379+00:00",
+      "updated_at": "2026-07-01T17:35:33.781186+00:00",
+      "message_count": 2,
+      "phone": "acknowledgement@dbs.com",
+      "handle_name": "DBS Bank"
+    },
+    {
+      "id": "95042802-bd7d-4e26-87b4-a4146ea7196f",
+      "display_name": "SmarTone",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.790018+00:00",
+      "updated_at": "2026-07-01T17:38:15.889451+00:00",
+      "message_count": 2,
+      "phone": "advice@comms.smartone.com",
+      "handle_name": "SmarTone"
+    },
+    {
+      "id": "3d156e5b-2aa7-47c6-bcd0-b049faa041d2",
+      "display_name": "Adam Harper",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.791553+00:00",
+      "updated_at": "2026-07-01T17:37:56.137622+00:00",
+      "message_count": 2,
+      "phone": "aharper@ashburycommunications.com",
+      "handle_name": "Adam Harper"
+    },
+    {
+      "id": "cb3b3d1e-d7f6-461a-9416-2b19105854b3",
+      "display_name": "Andrew Li",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:39.793474+00:00",
+      "updated_at": "2026-07-01T17:36:11.148527+00:00",
+      "message_count": 2,
+      "phone": "ali@crimtan.com",
+      "handle_name": "Andrew Li"
+    },
+    {
+      "id": "1d4f72a4-f995-497c-9b64-2a346baac20b",
+      "display_name": "Amanda Rubrico",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.684277+00:00",
+      "updated_at": "2026-07-01T17:35:49.419635+00:00",
+      "message_count": 2,
+      "phone": "amanda.rubrico@mplus.org.hk",
+      "handle_name": "Amanda Rubrico"
+    },
+    {
+      "id": "eac51ae7-6fa8-414d-8a8f-ba00be451b9f",
+      "display_name": "Anna Wong",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.688537+00:00",
+      "updated_at": "2026-07-01T17:37:07.259073+00:00",
+      "message_count": 2,
+      "phone": "anna.wong@dentsu.com",
+      "handle_name": "Anna Wong"
+    },
+    {
+      "id": "c7700b32-b62a-4fcc-9b96-152537328427",
+      "display_name": "Supabase Billing Team",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.691189+00:00",
+      "updated_at": "2026-07-01T17:35:46.074336+00:00",
+      "message_count": 2,
+      "phone": "billing-support@supabase.com",
+      "handle_name": "Supabase Billing Team"
+    },
+    {
+      "id": "0cf422bd-6012-435c-a8e9-5964804f667a",
+      "display_name": "Billy Mak",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.696370+00:00",
+      "updated_at": "2026-07-01T17:37:27.712209+00:00",
+      "message_count": 2,
+      "phone": "billy.mak@hhglobal.com",
+      "handle_name": "Billy Mak"
+    },
+    {
+      "id": "3b3df95a-aff4-40fe-a03d-364b1f100a83",
+      "display_name": "Cassy Chung",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.705646+00:00",
+      "updated_at": "2026-07-01T17:36:11.150295+00:00",
+      "message_count": 2,
+      "phone": "cassy.chung@fabcom.hk",
+      "handle_name": "Cassy Chung"
+    },
+    {
+      "id": "a5e58fa7-e2cc-4587-8a8f-a49d194c8b54",
+      "display_name": "Chantel Ng (Omnicom)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.708422+00:00",
+      "updated_at": "2026-07-01T17:36:40.671850+00:00",
+      "message_count": 2,
+      "phone": "chantel.ng@ptarmiganmedia.com",
+      "handle_name": "Chantel Ng (Omnicom)"
+    },
+    {
+      "id": "eb9afbe3-fe32-4ff0-9576-d7666a9d640a",
+      "display_name": "Chelsea with IFTTT",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.711618+00:00",
+      "updated_at": "2026-07-01T17:37:02.443377+00:00",
+      "message_count": 2,
+      "phone": "chelsea.c@ifttt.com",
+      "handle_name": "Chelsea with IFTTT"
+    },
+    {
+      "id": "0363c26d-2879-480d-9128-fa7658267dab",
+      "display_name": "Cryptopolitan",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.728846+00:00",
+      "updated_at": "2026-07-01T17:39:40.245583+00:00",
+      "message_count": 2,
+      "phone": "cryptopolitan@mail.beehiiv.com",
+      "handle_name": "Cryptopolitan"
+    },
+    {
+      "id": "f83b02de-ef8b-4d15-a715-e1049c2a5ef9",
+      "display_name": "Crystal Leung (Omnicom)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:40.732831+00:00",
+      "updated_at": "2026-07-01T17:38:50.139258+00:00",
+      "message_count": 2,
+      "phone": "crystal.leung@omc.com",
+      "handle_name": "Crystal Leung (Omnicom)"
+    },
+    {
+      "id": "a9ec5411-4d49-49c5-918a-8110bbdb5576",
+      "display_name": "Money-Tab",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.499345+00:00",
+      "updated_at": "2026-07-01T17:40:20.407199+00:00",
+      "message_count": 2,
+      "phone": "cs@money-tab.com",
+      "handle_name": "Money-Tab"
+    },
+    {
+      "id": "1caee78d-ea00-4bc6-a49c-91d1b11d3b4f",
+      "display_name": "Denise Man",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.503513+00:00",
+      "updated_at": "2026-07-01T17:36:43.277022+00:00",
+      "message_count": 2,
+      "phone": "denise.man@starcomww.com",
+      "handle_name": "Denise Man"
+    },
+    {
+      "id": "ade4dfc8-ec04-4b77-b79b-bb4fbeab65de",
+      "display_name": "Envato Market",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.507731+00:00",
+      "updated_at": "2026-07-01T17:36:00.728668+00:00",
+      "message_count": 2,
+      "phone": "do-not-reply@market.envato.com",
+      "handle_name": "Envato Market"
+    },
+    {
+      "id": "94253a95-7d50-4040-af52-f14f45ff9034",
+      "display_name": "EDTECH WEEK",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.512376+00:00",
+      "updated_at": "2026-07-01T17:40:32.109912+00:00",
+      "message_count": 2,
+      "phone": "edtechweek@started.com",
+      "handle_name": "EDTECH WEEK"
+    },
+    {
+      "id": "9c02999d-e3b0-42b0-baf8-3271eb1fb750",
+      "display_name": "Eagle IP Limited",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.515476+00:00",
+      "updated_at": "2026-07-01T17:37:09.966672+00:00",
+      "message_count": 2,
+      "phone": "eip@eipgroup.asia",
+      "handle_name": "Eagle IP Limited"
+    },
+    {
+      "id": "254b7e9f-9955-4d1b-9271-ad0a16bb7cb1",
+      "display_name": "HostGator",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.520258+00:00",
+      "updated_at": "2026-07-01T17:39:48.465874+00:00",
+      "message_count": 2,
+      "phone": "emails@e.hostgator.com",
+      "handle_name": "HostGator"
+    },
+    {
+      "id": "11b48d87-a435-467b-9c0f-ef0c36f9365c",
+      "display_name": "CTHR Daily Enewsletter",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:41.526544+00:00",
+      "updated_at": "2026-07-01T17:37:51.547974+00:00",
+      "message_count": 2,
+      "phone": "enews@ctgoodjobsnews.hk",
+      "handle_name": "CTHR Daily Enewsletter"
+    },
+    {
+      "id": "66904b67-d9eb-4f2b-85ec-db73ab57f783",
+      "display_name": "Fiona Wong",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:42.312025+00:00",
+      "updated_at": "2026-07-01T17:39:37.484144+00:00",
+      "message_count": 2,
+      "phone": "fiona.wong@burohappold.com",
+      "handle_name": "Fiona Wong"
+    },
+    {
+      "id": "e72c45d8-73a6-4d1e-8927-7b6d9c5b2a00",
+      "display_name": "Facebook Friend Suggestions",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.094950+00:00",
+      "updated_at": "2026-07-01T17:37:43.419635+00:00",
+      "message_count": 2,
+      "phone": "friendsuggestion@facebookmail.com",
+      "handle_name": "Facebook Friend Suggestions"
+    },
+    {
+      "id": "a3ff41a7-293f-4aff-92d7-63fc625c9745",
+      "display_name": "Gayatri Mathur",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.102822+00:00",
+      "updated_at": "2026-07-01T17:37:20.128804+00:00",
+      "message_count": 2,
+      "phone": "gayatri@sinclaircomms.com",
+      "handle_name": "Gayatri Mathur"
+    },
+    {
+      "id": "11d532c2-60b1-44e2-b0d3-a11e3e2b85d9",
+      "display_name": "Animoto",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.884333+00:00",
+      "updated_at": "2026-07-01T17:38:21.605312+00:00",
+      "message_count": 2,
+      "phone": "hello@e.animoto.com",
+      "handle_name": "Animoto"
+    },
+    {
+      "id": "63085b28-643c-4d0c-a794-9ffa86e3bcda",
+      "display_name": "Karen from Tektos",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.892854+00:00",
+      "updated_at": "2026-07-01T17:39:06.656872+00:00",
+      "message_count": 2,
+      "phone": "hello@tektosdesign.com",
+      "handle_name": "Karen from Tektos"
+    },
+    {
+      "id": "cddce70d-64b4-4619-9edf-5fe594258e4d",
+      "display_name": " \u5ba2\u7dad\u63a8\u5ee3\u670d\u52d9\u652f\u6301 ",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.899570+00:00",
+      "updated_at": "2026-07-01T17:36:33.437967+00:00",
+      "message_count": 2,
+      "phone": "hkcmmall@sf-express.com",
+      "handle_name": " \u5ba2\u7dad\u63a8\u5ee3\u670d\u52d9\u652f\u6301 "
+    },
+    {
+      "id": "06c4848d-1f0a-458b-90b5-4abe7d60dd5f",
+      "display_name": "HKTDC Exhibition",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.904976+00:00",
+      "updated_at": "2026-07-01T17:39:33.268196+00:00",
+      "message_count": 2,
+      "phone": "hktdc-exhibition@hktdc.com",
+      "handle_name": "HKTDC Exhibition"
+    },
+    {
+      "id": "07c15d3a-802c-43dc-9e5b-e5f151deca2f",
+      "display_name": "Isabella Suen",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.930511+00:00",
+      "updated_at": "2026-07-01T17:37:56.140103+00:00",
+      "message_count": 2,
+      "phone": "isabella.suen@dentsu.com",
+      "handle_name": "Isabella Suen"
+    },
+    {
+      "id": "aabb7b02-b43a-494d-a820-8f0cd8e05447",
+      "display_name": "Ivy Lee \u674e\u6167\u7464",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.936845+00:00",
+      "updated_at": "2026-07-01T17:37:53.725721+00:00",
+      "message_count": 2,
+      "phone": "ivy.lee@baobab-tree-event.com",
+      "handle_name": "Ivy Lee \u674e\u6167\u7464"
+    },
+    {
+      "id": "02c85075-9fc8-471e-a97c-53162a9c5263",
+      "display_name": "James Odell",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.943267+00:00",
+      "updated_at": "2026-07-01T17:40:00.487407+00:00",
+      "message_count": 2,
+      "phone": "james@rarefinds-worldswide.pro",
+      "handle_name": "James Odell"
+    },
+    {
+      "id": "824af68b-e002-4dfe-9357-cf47c91f008a",
+      "display_name": "Janice Cheung, JY (HR)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.949232+00:00",
+      "updated_at": "2026-07-01T17:36:51.972252+00:00",
+      "message_count": 2,
+      "phone": "janice.jy.cheung@hktdc.org",
+      "handle_name": "Janice Cheung, JY (HR)"
+    },
+    {
+      "id": "f79df619-af2c-4f6b-9474-8e7232252704",
+      "display_name": "Jennifer Fung",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.955709+00:00",
+      "updated_at": "2026-07-01T17:39:50.511912+00:00",
+      "message_count": 2,
+      "phone": "jennifer.fung@kantar.com",
+      "handle_name": "Jennifer Fung"
+    },
+    {
+      "id": "57be97de-6c29-400b-b2dd-a69603a02b67",
+      "display_name": "Eric Jin",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.963157+00:00",
+      "updated_at": "2026-07-01T17:35:58.183023+00:00",
+      "message_count": 2,
+      "phone": "jine@ruderfinn.com",
+      "handle_name": "Eric Jin"
+    },
+    {
+      "id": "0c4c33e9-7f77-4635-a784-d93f330e6e5b",
+      "display_name": "Lo John K.C. (CITD)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.968645+00:00",
+      "updated_at": "2026-07-01T17:37:27.715305+00:00",
+      "message_count": 2,
+      "phone": "john.lo@towngas.com",
+      "handle_name": "Lo John K.C. (CITD)"
+    },
+    {
+      "id": "283339e4-e2b5-44c6-b369-8c215ddeff7a",
+      "display_name": "Doris Lee (Tag HK)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.973573+00:00",
+      "updated_at": "2026-07-01T17:38:10.468768+00:00",
+      "message_count": 2,
+      "phone": "ka.lee@tagworldwide.com",
+      "handle_name": "Doris Lee (Tag HK)"
+    },
+    {
+      "id": "3cff97b7-e003-44ff-8891-7dcf0207f0c4",
+      "display_name": "Kannika Kanthakham",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.978979+00:00",
+      "updated_at": "2026-07-01T17:38:59.781589+00:00",
+      "message_count": 2,
+      "phone": "kannika.kanthakham@media-outreach.com",
+      "handle_name": "Kannika Kanthakham"
+    },
+    {
+      "id": "10bf08e1-6e22-467c-ae2e-94fae70970f1",
+      "display_name": "Katrina Zhu",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.984080+00:00",
+      "updated_at": "2026-07-01T17:37:45.557931+00:00",
+      "message_count": 2,
+      "phone": "katrina.zhu@mslgroup.com",
+      "handle_name": "Katrina Zhu"
+    },
+    {
+      "id": "035d9a49-c09f-4ef5-8ed9-f022137bccf0",
+      "display_name": "LAM Ka Ki",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.989118+00:00",
+      "updated_at": "2026-07-01T17:39:50.513227+00:00",
+      "message_count": 2,
+      "phone": "kitkatlam@hkcs.org",
+      "handle_name": "LAM Ka Ki"
+    },
+    {
+      "id": "3486c3bb-ec10-48f2-b504-4822ed5a1d45",
+      "display_name": "Kitty Kwan",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.993474+00:00",
+      "updated_at": "2026-07-01T17:36:08.585187+00:00",
+      "message_count": 2,
+      "phone": "kitty.kwan@carat.com",
+      "handle_name": "Kitty Kwan"
+    },
+    {
+      "id": "bf11122d-1698-4b51-bd46-e155342710d4",
+      "display_name": "Leo Tam",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:43.997962+00:00",
+      "updated_at": "2026-07-01T17:37:33.337871+00:00",
+      "message_count": 2,
+      "phone": "leo.tam@circle-square.com",
+      "handle_name": "Leo Tam"
+    },
+    {
+      "id": "f23b287a-6152-44f9-a9c2-2169099aa3ee",
+      "display_name": "Leon Ho (Omnicom)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.003527+00:00",
+      "updated_at": "2026-07-01T17:37:22.692359+00:00",
+      "message_count": 2,
+      "phone": "leon.ho@ptarmiganmedia.com",
+      "handle_name": "Leon Ho (Omnicom)"
+    },
+    {
+      "id": "5b4621d0-ae51-4a36-a424-07a3f9f6ee4e",
+      "display_name": "Maggie Cheng",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.784802+00:00",
+      "updated_at": "2026-07-01T17:37:27.714409+00:00",
+      "message_count": 2,
+      "phone": "maggie.cheng@hhglobal.com",
+      "handle_name": "Maggie Cheng"
+    },
+    {
+      "id": "4276fc36-cab8-4fe6-abfd-9e2eaad834ec",
+      "display_name": "Malcolm Barr (Tag HK)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.797362+00:00",
+      "updated_at": "2026-07-01T17:38:39.847933+00:00",
+      "message_count": 2,
+      "phone": "mbarr01@aegisdentsunetwork.mail.onmicrosoft.com",
+      "handle_name": "Malcolm Barr (Tag HK)"
+    },
+    {
+      "id": "ecd34870-d3f5-44b1-8afd-74cd711723e7",
+      "display_name": "LinkedIn",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 2,
+      "created_at": "2026-07-01T17:30:44.817782+00:00",
+      "updated_at": "2026-07-01T17:40:27.480321+00:00",
+      "message_count": 2,
+      "phone": "notifications-noreply@linkedin.com",
+      "handle_name": "LinkedIn"
+    },
+    {
+      "id": "9c4a6121-49b3-48fc-8067-dd37a5c27869",
+      "display_name": "micenet news update",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.826658+00:00",
+      "updated_at": "2026-07-01T17:36:21.905141+00:00",
+      "message_count": 2,
+      "phone": "micenet@btp.net.au",
+      "handle_name": "micenet news update"
+    },
+    {
+      "id": "81654078-9e69-492c-a280-fa281ae04c97",
+      "display_name": "Microsoft",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.836603+00:00",
+      "updated_at": "2026-07-01T17:38:00.157501+00:00",
+      "message_count": 2,
+      "phone": "microsoft-noreply@microsoft.com",
+      "handle_name": "Microsoft"
+    },
+    {
+      "id": "a6cd7eff-08dd-496c-8836-7ef6893365b2",
+      "display_name": "Minnie King - JIN Communications",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.845197+00:00",
+      "updated_at": "2026-07-01T17:38:07.703654+00:00",
+      "message_count": 2,
+      "phone": "minnie.ml.king@jin-comm.com",
+      "handle_name": "Minnie King - JIN Communications"
+    },
+    {
+      "id": "2fe7de16-97ef-4f32-a922-c71303adaaaa",
+      "display_name": "Mukhopadhyay Sabarno",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.857571+00:00",
+      "updated_at": "2026-07-01T17:35:51.989227+00:00",
+      "message_count": 2,
+      "phone": "mukhopadhyay.sabarno@kantar.com",
+      "handle_name": "Mukhopadhyay Sabarno"
+    },
+    {
+      "id": "868c5548-31b1-49c8-90e5-c9364eccb5ac",
+      "display_name": "Anna Haotanto from My Brilliant Self ",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.865501+00:00",
+      "updated_at": "2026-07-01T17:37:36.320838+00:00",
+      "message_count": 2,
+      "phone": "mybrilliantself@substack.com",
+      "handle_name": "Anna Haotanto from My Brilliant Self "
+    },
+    {
+      "id": "28c3b27b-dbcf-4073-bad0-9b250fd3ba50",
+      "display_name": "Kickstart Genius",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.888433+00:00",
+      "updated_at": "2026-07-01T17:35:36.206127+00:00",
+      "message_count": 2,
+      "phone": "news@kickstartgenius.com",
+      "handle_name": "Kickstart Genius"
+    },
+    {
+      "id": "8abee946-9200-4ee8-8217-56be12c2c90a",
+      "display_name": "Lumosity",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.894337+00:00",
+      "updated_at": "2026-07-01T17:38:28.733651+00:00",
+      "message_count": 2,
+      "phone": "newsletter@notifications.lumosity.com",
+      "handle_name": "Lumosity"
+    },
+    {
+      "id": "9a8599ed-af4c-4347-b15b-84f48ea0c03a",
+      "display_name": "Hello Leaders",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.907393+00:00",
+      "updated_at": "2026-07-01T17:40:17.281619+00:00",
+      "message_count": 2,
+      "phone": "newsletters@helloleaders.com.au",
+      "handle_name": "Hello Leaders"
+    },
+    {
+      "id": "b5686d3a-5649-4167-9a95-d7ab3d8fb04a",
+      "display_name": "Nicole Cheng (Omnicom)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:44.914015+00:00",
+      "updated_at": "2026-07-01T17:35:43.351429+00:00",
+      "message_count": 2,
+      "phone": "nicole.cheng@omnicommediagroup.com",
+      "handle_name": "Nicole Cheng (Omnicom)"
+    },
+    {
+      "id": "a4a10928-82d2-4ca1-8bb6-0c284db95da8",
+      "display_name": "South Asia Watch: Nikkei Asia",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:45.715524+00:00",
+      "updated_at": "2026-07-01T17:40:03.553551+00:00",
+      "message_count": 2,
+      "phone": "nikkeiasia-w-nl@namail.nikkei.com",
+      "handle_name": "South Asia Watch: Nikkei Asia"
+    },
+    {
+      "id": "6370cac0-9283-42a8-a84e-284d61cd29c9",
+      "display_name": "CNCF Events",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.575925+00:00",
+      "updated_at": "2026-07-01T17:36:07.575572+00:00",
+      "message_count": 2,
+      "phone": "no-reply@cncf.io",
+      "handle_name": "CNCF Events"
+    },
+    {
+      "id": "5999297d-86b1-44b8-8212-279f98b5ded2",
+      "display_name": "Roblox",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.582009+00:00",
+      "updated_at": "2026-07-01T17:38:52.883406+00:00",
+      "message_count": 2,
+      "phone": "no-reply@roblox.com",
+      "handle_name": "Roblox"
+    },
+    {
+      "id": "f98f622a-39c2-48bd-bf18-691ba0a83f26",
+      "display_name": "Agoda Price Alerts",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.587851+00:00",
+      "updated_at": "2026-07-01T17:36:54.965490+00:00",
+      "message_count": 2,
+      "phone": "no-reply@sg.newsletter.agoda-emails.com",
+      "handle_name": "Agoda Price Alerts"
+    },
+    {
+      "id": "542b77df-1c70-4252-acf2-54c2d46e25d6",
+      "display_name": "Facebook",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:30:47.603421+00:00",
+      "updated_at": "2026-07-02T00:19:04.300770+00:00",
+      "message_count": 2,
+      "phone": "noreply@developers.facebook.com",
+      "handle_name": "Facebook"
+    },
+    {
+      "id": "542b77df-1c70-4252-acf2-54c2d46e25d6",
+      "display_name": "Facebook",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:30:47.603421+00:00",
+      "updated_at": "2026-07-02T00:19:04.300770+00:00",
+      "message_count": 2,
+      "phone": "reminders@facebookmail.com",
+      "handle_name": "Facebook"
+    },
+    {
+      "id": "8547e0f5-0757-437f-b8d8-a9b206747d68",
+      "display_name": "Proven",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.609907+00:00",
+      "updated_at": "2026-07-01T17:39:04.530440+00:00",
+      "message_count": 2,
+      "phone": "noreply@getproven.com",
+      "handle_name": "Proven"
+    },
+    {
+      "id": "b96988ff-80c2-4c52-9c9f-89c92cc66d3c",
+      "display_name": "Octopus Cards Limited",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.615319+00:00",
+      "updated_at": "2026-07-01T17:40:19.402511+00:00",
+      "message_count": 2,
+      "phone": "noreply@marketing.octopus.com.hk",
+      "handle_name": "Octopus Cards Limited"
+    },
+    {
+      "id": "6a40294a-6030-454b-b3a7-d01f0eb36800",
+      "display_name": "Supabase",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:47.639215+00:00",
+      "updated_at": "2026-07-01T17:36:48.314303+00:00",
+      "message_count": 2,
+      "phone": "noreply@supabase.com",
+      "handle_name": "Supabase"
+    },
+    {
+      "id": "17f9052f-0983-4385-b4e7-318f5ac2a64b",
+      "display_name": "SmarTone Credit Control",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:30:48.446263+00:00",
+      "updated_at": "2026-07-01T17:39:35.320474+00:00",
+      "message_count": 2,
+      "phone": "notifications@ebill.smartone.com",
+      "handle_name": "SmarTone Credit Control"
+    },
+    {
+      "id": "4c7defe0-7d30-4935-bb5b-685cf602ba65",
+      "display_name": "Cognition Team",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:36:28.629747+00:00",
+      "updated_at": "2026-07-01T17:38:13.242331+00:00",
+      "message_count": 2,
+      "phone": "support@cognition.ai",
+      "handle_name": "Cognition Team"
+    },
+    {
+      "id": "7c6d7811-7d75-48e0-9d96-795e01bec205",
+      "display_name": "Zoom",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:40:25.130163+00:00",
+      "updated_at": "2026-07-01T20:07:57.998584+00:00",
+      "message_count": 2,
+      "phone": "teamzoom@e.zoom.us",
+      "handle_name": "Zoom"
+    },
+    {
+      "id": "645130c5-241d-4807-af94-3aed3a7df088",
+      "display_name": "Amazon Web Services",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T22:25:47.920332+00:00",
+      "updated_at": "2026-07-01T22:36:57.865370+00:00",
+      "message_count": 2,
+      "phone": "invoicing@aws.com",
+      "handle_name": "Amazon Web Services"
+    },
+    {
+      "id": "58b9b716-89b3-4496-b839-751e34b0e3bb",
+      "display_name": "LinkedIn Sales Navigator",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:18:53.140212+00:00",
+      "updated_at": "2026-07-02T01:18:53.154509+00:00",
+      "message_count": 2,
+      "phone": "linkedin@em.linkedin.com",
+      "handle_name": "LinkedIn Sales Navigator"
+    },
+    {
+      "id": "ecd34870-d3f5-44b1-8afd-74cd711723e7",
+      "display_name": "LinkedIn",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 2,
+      "created_at": "2026-07-01T17:30:44.817782+00:00",
+      "updated_at": "2026-07-01T17:40:27.480321+00:00",
+      "message_count": 1,
+      "phone": "updates-noreply@linkedin.com",
+      "handle_name": "LinkedIn"
+    },
+    {
+      "id": "b5f036bf-50fb-4335-8ff0-a0e46917bcb6",
+      "display_name": "Vic Man",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:35:58.185681+00:00",
+      "updated_at": "2026-07-01T17:35:58.185681+00:00",
+      "message_count": 1,
+      "phone": "vic.man@sandpipercomms.com",
+      "handle_name": "Vic Man"
+    },
+    {
+      "id": "ae5787d2-c1a0-4332-92db-b23398e80ba1",
+      "display_name": "Suki Lai",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:36:17.164013+00:00",
+      "updated_at": "2026-07-01T17:36:17.164013+00:00",
+      "message_count": 1,
+      "phone": "suki.lai@hktb.com",
+      "handle_name": "Suki Lai"
+    },
+    {
+      "id": "36b193d0-08ba-4d11-9e7e-9ba4372416f1",
+      "display_name": "Canva",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:36:19.796021+00:00",
+      "updated_at": "2026-07-01T17:36:19.796021+00:00",
+      "message_count": 1,
+      "phone": "product@engage.canva.com",
+      "handle_name": "Canva"
+    },
+    {
+      "id": "f684ee3b-8257-4b21-8cea-8364e19f5c0d",
+      "display_name": "Uber",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:36:38.439020+00:00",
+      "updated_at": "2026-07-01T17:38:45.176276+00:00",
+      "message_count": 1,
+      "phone": "uber.hongkong@uber.com",
+      "handle_name": "Uber"
+    },
+    {
+      "id": "f684ee3b-8257-4b21-8cea-8364e19f5c0d",
+      "display_name": "Uber",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T17:36:38.439020+00:00",
+      "updated_at": "2026-07-01T17:38:45.176276+00:00",
+      "message_count": 1,
+      "phone": "uber@uber.com",
+      "handle_name": "Uber"
+    },
+    {
+      "id": "69a1d3dc-8905-45dd-8ffc-859859ef2c09",
+      "display_name": "Yannick Lenormand",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:36:45.792131+00:00",
+      "updated_at": "2026-07-01T17:36:45.792131+00:00",
+      "message_count": 1,
+      "phone": "yannick.lenormand@arup.com",
+      "handle_name": "Yannick Lenormand"
+    },
+    {
+      "id": "d37cde19-d24e-40ca-a95e-433f7d250229",
+      "display_name": "Ricky Tsui",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:36:49.319531+00:00",
+      "updated_at": "2026-07-01T17:36:49.319531+00:00",
+      "message_count": 1,
+      "phone": "ricky.tsui@arup.com",
+      "handle_name": "Ricky Tsui"
+    },
+    {
+      "id": "e9f8576b-d2f2-4e83-952b-0e2773ed3557",
+      "display_name": "Wing Iu (GCAMHK)",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:36:51.974267+00:00",
+      "updated_at": "2026-07-01T17:36:51.974267+00:00",
+      "message_count": 1,
+      "phone": "wingiu@gawcapitalam.com.hk",
+      "handle_name": "Wing Iu (GCAMHK)"
+    },
+    {
+      "id": "fd089107-7548-4173-97de-9e509bb4b207",
+      "display_name": "Academia Mentions",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:04.810605+00:00",
+      "updated_at": "2026-07-01T17:37:04.810605+00:00",
+      "message_count": 1,
+      "phone": "premium@academia-mail.com",
+      "handle_name": "Academia Mentions"
+    },
+    {
+      "id": "953740b7-9e15-4555-a04c-ad09ec43c026",
+      "display_name": "Shirley Surya",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:09.952882+00:00",
+      "updated_at": "2026-07-01T17:37:09.952882+00:00",
+      "message_count": 1,
+      "phone": "shirley.surya@mplus.org.hk",
+      "handle_name": "Shirley Surya"
+    },
+    {
+      "id": "1f1536a1-98e2-4bc5-89d3-b6a35c4e0975",
+      "display_name": "Tammy Tam",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:09.967960+00:00",
+      "updated_at": "2026-07-01T17:37:09.967960+00:00",
+      "message_count": 1,
+      "phone": "tammy.tam@uniplan.com",
+      "handle_name": "Tammy Tam"
+    },
+    {
+      "id": "dcbe0f8b-2e0c-4809-a892-dc922e31f17b",
+      "display_name": "Smart Card Intelligence",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:17.941200+00:00",
+      "updated_at": "2026-07-01T17:37:17.941200+00:00",
+      "message_count": 1,
+      "phone": "scbi@apsca.org",
+      "handle_name": "Smart Card Intelligence"
+    },
+    {
+      "id": "be9a779c-869c-4649-80ed-b70287b4d4f8",
+      "display_name": "Russell Storer",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:33.339335+00:00",
+      "updated_at": "2026-07-01T17:37:33.339335+00:00",
+      "message_count": 1,
+      "phone": "russell.storer@mplus.org.hk",
+      "handle_name": "Russell Storer"
+    },
+    {
+      "id": "ee708967-e02c-4a2f-9102-88b9e7f35be3",
+      "display_name": "Olivier KUZINER",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:38.787318+00:00",
+      "updated_at": "2026-07-01T17:37:38.787318+00:00",
+      "message_count": 1,
+      "phone": "olivier.kuziner@ekimetrics.com",
+      "handle_name": "Olivier KUZINER"
+    },
+    {
+      "id": "b166978c-c279-480c-99c2-0f87e631b530",
+      "display_name": "YANG, Yvonne Y",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:37:45.541727+00:00",
+      "updated_at": "2026-07-01T17:37:45.541727+00:00",
+      "message_count": 1,
+      "phone": "yvonne-y.yang@polyu.edu.hk",
+      "handle_name": "YANG, Yvonne Y"
+    },
+    {
+      "id": "c48e4e6b-a0ed-4a9b-be2e-47edf80c2b40",
+      "display_name": "Google Play | Apps & Games",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:38:23.942164+00:00",
+      "updated_at": "2026-07-01T17:38:23.942164+00:00",
+      "message_count": 1,
+      "phone": "playpartners-noreply@google.com",
+      "handle_name": "Google Play | Apps & Games"
+    },
+    {
+      "id": "7d1b997e-0d75-498b-8a7b-939eac8089da",
+      "display_name": "AppSumo",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:38:32.084012+00:00",
+      "updated_at": "2026-07-01T17:38:32.084012+00:00",
+      "message_count": 1,
+      "phone": "support@appsumo.com",
+      "handle_name": "AppSumo"
+    },
+    {
+      "id": "668767c9-715c-4625-8448-7d8ee48d6e21",
+      "display_name": "Global Sources Product Alert",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:38:55.158277+00:00",
+      "updated_at": "2026-07-01T17:38:55.158277+00:00",
+      "message_count": 1,
+      "phone": "paservices@globalsources.com",
+      "handle_name": "Global Sources Product Alert"
+    },
+    {
+      "id": "4ef57b1c-4f74-47fb-a1d5-dc083c7c8b35",
+      "display_name": "Theo from Cognition",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:39:16.306052+00:00",
+      "updated_at": "2026-07-01T17:39:16.306052+00:00",
+      "message_count": 1,
+      "phone": "theo@cognition.ai",
+      "handle_name": "Theo from Cognition"
+    },
+    {
+      "id": "9fe89789-0213-424a-b9cc-ddeabb05169a",
+      "display_name": "Super Speciosa",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:39:19.191775+00:00",
+      "updated_at": "2026-07-01T17:39:19.191775+00:00",
+      "message_count": 1,
+      "phone": "ss@superspeciosa.com",
+      "handle_name": "Super Speciosa"
+    },
+    {
+      "id": "da69f5cb-d717-4603-8e6c-9e7b35be753f",
+      "display_name": "Stripe",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:39:26.082985+00:00",
+      "updated_at": "2026-07-01T17:39:26.082985+00:00",
+      "message_count": 1,
+      "phone": "updates@e.stripe.com",
+      "handle_name": "Stripe"
+    },
+    {
+      "id": "97539769-e496-49da-b027-52ad6b2d546e",
+      "display_name": "Wei Guo",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:39:30.634955+00:00",
+      "updated_at": "2026-07-01T17:39:30.634955+00:00",
+      "message_count": 1,
+      "phone": "wei.guo@kantar.com",
+      "handle_name": "Wei Guo"
+    },
+    {
+      "id": "e1634045-2780-4ed7-be49-7d640fa5a608",
+      "display_name": "Instagram",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:39:55.720643+00:00",
+      "updated_at": "2026-07-01T17:39:55.720643+00:00",
+      "message_count": 1,
+      "phone": "posts-recap@mail.instagram.com",
+      "handle_name": "Instagram"
+    },
+    {
+      "id": "083dd7d6-a578-456c-bdcd-a7dcbf7ecd09",
+      "display_name": "Stephen Tew",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:40:05.984806+00:00",
+      "updated_at": "2026-07-01T17:40:05.984806+00:00",
+      "message_count": 1,
+      "phone": "stephen.tew@hhglobal.com",
+      "handle_name": "Stephen Tew"
+    },
+    {
+      "id": "84d606e9-c3d4-42b3-ace2-00235a0a09b5",
+      "display_name": "Kickstarter New Project",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:40:34.650527+00:00",
+      "updated_at": "2026-07-01T17:40:34.650527+00:00",
+      "message_count": 1,
+      "phone": "team@kickstarternew.com",
+      "handle_name": "Kickstarter New Project"
+    },
+    {
+      "id": "123ee5e7-5c9c-440b-8c4a-67143c792cd6",
+      "display_name": "Alibaba Cloud",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T17:40:41.954906+00:00",
+      "updated_at": "2026-07-01T17:40:41.954906+00:00",
+      "message_count": 1,
+      "phone": "system-sg@notice.alibabacloud.com",
+      "handle_name": "Alibaba Cloud"
+    },
+    {
+      "id": "92b74afd-a7b7-43b9-81cb-c2cdd6ef683e",
+      "display_name": "Ricky Lui",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T18:18:33.787449+00:00",
+      "updated_at": "2026-07-02T02:02:44.799433+00:00",
+      "message_count": 1,
+      "phone": "rickylui@snappopapp.com",
+      "handle_name": "Ricky Lui"
+    },
+    {
+      "id": "92b74afd-a7b7-43b9-81cb-c2cdd6ef683e",
+      "display_name": "Ricky Lui",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 1,
+      "created_at": "2026-07-01T18:18:33.787449+00:00",
+      "updated_at": "2026-07-02T02:02:44.799433+00:00",
+      "message_count": 1,
+      "phone": "auhl@eduhk.hk",
+      "handle_name": "AU, Hoi Lam [SAO]"
+    },
+    {
+      "id": "b3c9190d-d54d-489a-ace7-ebc7073d8ccc",
+      "display_name": "Etsy",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T20:28:25.713428+00:00",
+      "updated_at": "2026-07-01T20:28:25.713428+00:00",
+      "message_count": 1,
+      "phone": "email@email.etsy.com",
+      "handle_name": "Etsy"
+    },
+    {
+      "id": "71e0b327-e13a-4316-bf48-6e88f3dba83c",
+      "display_name": "Pat @ Starter Story",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T20:37:18.460141+00:00",
+      "updated_at": "2026-07-01T20:37:18.460141+00:00",
+      "message_count": 1,
+      "phone": "pat@starterstory.com",
+      "handle_name": "Pat @ Starter Story"
+    },
+    {
+      "id": "1bccdb49-5412-4ce1-8a0a-d1313ae80329",
+      "display_name": "ebill@bill.sf-express.com",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T22:07:55.108182+00:00",
+      "updated_at": "2026-07-01T22:07:55.108182+00:00",
+      "message_count": 1,
+      "phone": "ebill@bill.sf-express.com",
+      "handle_name": ""
+    },
+    {
+      "id": "a55855f3-9540-4c08-a57d-43943ab33d32",
+      "display_name": "McDonald's Account Services",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T23:43:06.491746+00:00",
+      "updated_at": "2026-07-01T23:43:06.491746+00:00",
+      "message_count": 1,
+      "phone": "DoNotReply@mcdonalds.com",
+      "handle_name": "McDonald's Account Services"
+    },
+    {
+      "id": "cb27ff6a-c8ae-4192-a1ab-ca522fc77210",
+      "display_name": "Global Sources Hot Product",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T00:11:19.349509+00:00",
+      "updated_at": "2026-07-02T00:11:19.349509+00:00",
+      "message_count": 1,
+      "phone": "hpaservices@globalsources.com",
+      "handle_name": "Global Sources Hot Product"
+    },
+    {
+      "id": "82f01ae2-0b5d-48c3-a3c8-8311162c7be8",
+      "display_name": "Wen Xiao",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T00:14:42.107549+00:00",
+      "updated_at": "2026-07-02T00:14:42.107549+00:00",
+      "message_count": 1,
+      "phone": "wen.xiao@airwallex.io",
+      "handle_name": "Wen Xiao"
+    },
+    {
+      "id": "e9e20758-07fa-42c7-ac6b-7ad4e87c952e",
+      "display_name": "Heidi Owen",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:04:13.759470+00:00",
+      "updated_at": "2026-07-02T01:04:13.759470+00:00",
+      "message_count": 1,
+      "phone": "HeidiO@corumgroup.com",
+      "handle_name": "Heidi Owen"
+    },
+    {
+      "id": "9450f7ad-9053-40de-8f16-7dad831eadf3",
+      "display_name": "Bett Asia",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:11:01.012846+00:00",
+      "updated_at": "2026-07-02T01:11:01.012846+00:00",
+      "message_count": 1,
+      "phone": "bettasia@events.asia.bettshow.com",
+      "handle_name": "Bett Asia"
+    },
+    {
+      "id": "5a1166f0-c8b2-4b26-8612-a014431d1dca",
+      "display_name": "DECATHLON",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:14:20.785632+00:00",
+      "updated_at": "2026-07-02T01:14:20.785632+00:00",
+      "message_count": 1,
+      "phone": "noreply-hk@email.decathlon.com",
+      "handle_name": "DECATHLON"
+    },
+    {
+      "id": "317738e7-e45c-408e-90d6-d09bf9f02ded",
+      "display_name": "The British Chamber of Commerce in Hong Kong",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:31:10.381288+00:00",
+      "updated_at": "2026-07-02T01:31:10.381288+00:00",
+      "message_count": 1,
+      "phone": "noreply@britcham.com",
+      "handle_name": "The British Chamber of Commerce in Hong Kong"
+    },
+    {
+      "id": "feaa2399-8f43-49d0-93ea-25ad0be5b578",
+      "display_name": "Steam",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:33:18.727507+00:00",
+      "updated_at": "2026-07-02T01:33:18.727507+00:00",
+      "message_count": 1,
+      "phone": "noreply@steampowered.com",
+      "handle_name": "Steam"
+    },
+    {
+      "id": "d954afd0-952a-4eee-ac67-031821c86eba",
+      "display_name": "HKMoA",
+      "is_family": 0,
+      "is_vip": 0,
+      "relation": null,
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-02T01:55:42.054893+00:00",
+      "updated_at": "2026-07-02T01:55:42.054893+00:00",
+      "message_count": 1,
+      "phone": "museum_of_art@lcsd.gov.hk",
+      "handle_name": "HKMoA"
+    },
+    {
+      "id": "d2550e5b-30b7-4539-a8aa-3cb40c03bd1f",
+      "display_name": "Heidi Lui",
       "is_family": 1,
+      "is_vip": 0,
       "relation": "Wife",
-      "first_seen": "2026-07-01T14:16:29.321165",
-      "last_seen": null,
-      "message_count": 0
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 0,
+      "phone": "+85294066060",
+      "handle_name": "Heidi Lui"
     },
     {
-      "phone": "+85252395796",
-      "name": "Mokan Lau",
+      "id": "c740696d-315d-4bf6-91dc-fdb43e003120",
+      "display_name": "Mokan Lau",
       "is_family": 1,
+      "is_vip": 0,
       "relation": "Elder Son",
-      "first_seen": "2026-07-01T14:16:29.321165",
-      "last_seen": null,
-      "message_count": 0
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 0,
+      "phone": "+85252395796",
+      "handle_name": "Mokan Lau"
     },
     {
-      "phone": "+85291318528",
-      "name": "Mowan Lau",
+      "id": "feaa5b66-0b44-4723-b629-47f957be4d74",
+      "display_name": "Mowan Lau",
       "is_family": 1,
+      "is_vip": 0,
       "relation": "Younger Son",
-      "first_seen": "2026-07-01T14:16:29.321165",
-      "last_seen": null,
-      "message_count": 0
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 0,
+      "phone": "+85291318528",
+      "handle_name": "Mowan Lau"
     },
     {
-      "phone": "+14167239963",
-      "name": "Anna Hau",
+      "id": "b40b3c4a-6782-481f-aeb3-d1811b16c266",
+      "display_name": "Anna Hau",
       "is_family": 1,
+      "is_vip": 0,
       "relation": "Mother",
-      "first_seen": "2026-07-01T14:16:29.321165",
-      "last_seen": null,
-      "message_count": 0
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 0,
+      "phone": "+14167239963",
+      "handle_name": "Anna Hau"
     },
     {
-      "phone": "+85262776600",
-      "name": "Andrew Lau",
+      "id": "d43b15ff-a47c-4149-819b-ca4945f2d4a8",
+      "display_name": "Andrew Lau",
       "is_family": 1,
+      "is_vip": 0,
       "relation": "Brother",
-      "first_seen": "2026-07-01T14:16:29.321165",
-      "last_seen": null,
-      "message_count": 0
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 0,
+      "phone": "+85262776600",
+      "handle_name": "Andrew Lau"
     },
     {
-      "phone": "+85262288510",
-      "name": "Jay Lau",
+      "id": "60b979fb-0e21-4ab5-8ab3-987e2f94d287",
+      "display_name": "Jay Lau",
       "is_family": 1,
+      "is_vip": 0,
       "relation": "Sister-in-law",
-      "first_seen": "2026-07-01T14:16:29.321165",
-      "last_seen": null,
-      "message_count": 0
+      "company": null,
+      "notes": null,
+      "auto_merged_count": 0,
+      "created_at": "2026-07-01T16:26:35.703642+00:00",
+      "updated_at": "2026-07-01T16:26:35.703642+00:00",
+      "message_count": 0,
+      "phone": "+85262288510",
+      "handle_name": "Jay Lau"
     }
   ],
   "tasks": [
