@@ -324,8 +324,9 @@ function render(data) {
   }
   document.getElementById('taskBreakdownTable').innerHTML = taskHtml;
 
-  // ── Top 10 most expensive tasks ──
-  var sortedByCost = tasks.slice().sort(function(a, b) { return b.cost - a.cost; });
+  // ── Top 10 most expensive tasks (skip $0 entries) ──
+  var spendyTasks = tasks.filter(function(t) { return t.cost > 0; });
+  var sortedByCost = spendyTasks.slice().sort(function(a, b) { return b.cost - a.cost; });
   var top10 = sortedByCost.slice(0, 10);
   var topHtml = '';
   top10.forEach(function(t, i) {
@@ -342,9 +343,28 @@ function render(data) {
       '</tr>';
   });
   if (top10.length === 0) {
-    topHtml = '<tr><td colspan="5" class="no-data">No tasks yet</td></tr>';
+    topHtml = '<tr><td colspan="5" class="no-data">No tasks with costs yet</td></tr>';
   }
   document.getElementById('topTasksTable').innerHTML = topHtml;
+
+  // ── Task History (individual calls) ──
+  var calls = data.calls || [];
+  var callHtml = '';
+  calls.forEach(function(c) {
+    var dateStr = c.time ? c.time.substring(0, 10) : '—';
+    callHtml += '<tr>' +
+      '<td>' + dateStr + '</td>' +
+      '<td class="cost">' + fmtCost(c.cost, ccy) + '</td>' +
+      '<td><span class="tag">' + (c.type || '—') + '</span></td>' +
+      '<td>' + c.task + '</td>' +
+      '<td>' + c.tokens.toLocaleString() + '</td>' +
+      '<td>' + c.id + '</td>' +
+      '</tr>';
+  });
+  if (calls.length === 0) {
+    callHtml = '<tr><td colspan="6" class="no-data">No calls recorded yet</td></tr>';
+  }
+  document.getElementById('taskTable').innerHTML = callHtml;
 
   // ── Timestamp ──
   document.getElementById('updatedAt').textContent = 'Last updated: ' + (data.updated_at || 'unknown') +
